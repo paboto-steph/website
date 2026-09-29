@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kreativ konsulent og madfotograf København | PABOTO</title>
+  <meta name="description" content="Culture activations, workshops and food photography for brands in Copenhagen. From-prices on the page. Book a call and get a clear first step.">
+  <link rel="canonical" href="https://paboto.com/">
+  <meta property="og:title" content="PABOTO | Creative consultant and photographer, Copenhagen">
+  <meta property="og:description" content="Culture activations, workshops and food photography for brands in Copenhagen.">
+  <meta property="og:url" content="https://paboto.com/">
+  <meta property="og:type" content="website">
+  <!-- TODO: add og:image once the hero photo is in /images -->
+  <style>
+    :root {
+      --bg: #f6f3ee;
+      --ink: #1c1b19;
+      --muted: #6b665e;
+      --line: #d9d3c8;
+      --accent: #1c1b19;
+      --placeholder: #e4ded3;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+    a { color: inherit; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+    header.top {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 20px 0;
+    }
+    .logo { font-weight: 700; letter-spacing: 0.12em; text-decoration: none; }
+    nav a { margin-left: 18px; text-decoration: none; color: var(--muted); font-size: 15px; }
+    nav a:hover { color: var(--ink); }
+    section { padding: 72px 0; border-top: 1px solid var(--line); }
+    .hero { border-top: 0; padding-top: 40px; }
+    .hero-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; }
+    h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.1; margin: 0 0 24px; font-weight: 600; }
+    h2 { font-size: 28px; margin: 0 0 32px; font-weight: 600; }
+    h3 { font-size: 20px; margin: 0 0 8px; }
+    .btn {
+      display: inline-block; background: var(--accent); color: var(--bg);
+      padding: 14px 26px; text-decoration: none; border-radius: 2px; font-weight: 600;
+    }
+    .img {
+      background: var(--placeholder); width: 100%; aspect-ratio: 4 / 5;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--muted); font-size: 14px; object-fit: cover;
+    }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .price { font-weight: 600; margin: 12px 0 0; }
+    .note { color: var(--muted); font-size: 15px; margin-top: 32px; }
+    .case .img { aspect-ratio: 3 / 2; margin-bottom: 16px; }
+    .case ul { padding-left: 18px; margin: 8px 0; }
+    .label { color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .about-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; align-items: start; }
+    .about-grid .img { aspect-ratio: 1; }
+    form { display: grid; gap: 12px; max-width: 520px; }
+    input, textarea {
+      font: inherit; padding: 12px; border: 1px solid var(--line); background: #fff; border-radius: 2px;
+    }
+    footer { padding: 32px 0; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
+    @media (max-width: 760px) {
+      .hero-grid, .grid-3, .about-grid { grid-template-columns: 1fr; }
+      nav { display: none; }
+      section { padding: 48px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- DRAFT COPY: every text block below needs Steph's sign-off before launch. -->
+  <div class="wrap">
+    <header class="top">
+      <a class="logo" href="/">PABOTO</a>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#cases">Cases</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- 1. Hero -->
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <h1>I help food, hospitality and culture brands turn ideas into moments people show up for. Then I shoot them.</h1>
+          <a class="btn" href="#contact">Book a call</a>
+        </div>
+        <!-- TODO: replace with <img src="/images/hero.jpg" alt="..."> (under 500 KB) -->
+        <div class="img" role="img" aria-label="Hero image placeholder">Hero image</div>
+      </div>
+    </section>
+
+    <!-- 2. Offers -->
+    <section id="services">
+      <h2>What you can book</h2>
+      <div class="grid-3">
+        <div>
+          <h3>Culture workshop</h3>
+          <p>A focused session with your team to find the idea worth building around, and a plan you can act on.</p>
+          <p class="price">From 6,500 kr half day / 10,000 kr day</p>
+        </div>
+        <div>
+          <h3>Photo and video</h3>
+          <p>Food, venue and event content, shot to be used. You get edited images ready for web and social.</p>
+          <p class="price">From 5,000 kr half day / 8,000 kr day</p>
+        </div>
+        <div>
+          <h3>Activation or retainer</h3>
+          <p>Concept, partner match, run-of-show and content on the day. Or a monthly retainer if you want me on call.</p>
+          <p class="price">Activation from 25,000 kr. Retainer from 10,000 kr/month</p>
+        </div>
+      </div>
+      <p class="note">All prices excl. moms. Prices are a starting point, adjusted to the scope and purpose of the job. Not sure yet? Start small with a half-day workshop or shoot.</p>
+    </section>
+
+    <!-- 3. Cases (facts to be confirmed by Steph) -->
+    <section id="cases">
+      <h2>Selected work</h2>
+      <div class="grid-3">
+        <article class="case">
+          <div class="img" role="img" aria-label="1664 Blanc x Boulebar image placeholder">Case image</div>
+          <p class="label">1664 Blanc x Boulebar</p>
+          <p><strong>Challenge:</strong> TODO</p>
+          <p><strong>Idea:</strong> TODO</p>
+          <ul><li>TODO</li></ul>
+          <p><strong>Result:</strong> 257% growth in event attendance.</p>
+        </article>
+        <article class="case">
+          <div class="img" role="img" aria-label="Oatly image placeholder">Case image</div>
+          <p class="label">Oatly</p>
+          <p><strong>Challenge:</strong> TODO</p>
+          <p><strong>Idea:</strong> TODO</p>
+          <ul><li>Local activation content</li><li>Visual materials</li></ul>
+        </article>
+        <article class="case">
+          <div class="img" role="img" aria-label="Strangas Gyros image placeholder">Case image</div>
+          <p class="label">Strangas Gyros</p>
+          <p><strong>Challenge:</strong> TODO</p>
+          <p><strong>Idea:</strong> TODO</p>
+          <ul><li>TODO</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4. About -->
+    <section id="about">
+      <div class="about-grid">
+        <div class="img" role="img" aria-label="Portrait placeholder">Portrait</div>
+        <div>
+          <h2>Hi, I'm Steph</h2>
+          <p>Most brands hire a strategist and a photographer separately. I do the thinking and the making, and I bring the right people into the room.</p>
+          <p>I'm a creative consultant and photographer based in Copenhagen, working with food, hospitality and culture brands. TODO: one or two more sentences in your own words.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Contact -->
+    <section id="contact">
+      <h2>Get in touch</h2>
+      <p>Tell me a bit about what you're planning. I'll reply within two working days.</p>
+      <p>
+        <a href="mailto:stephanie@paboto.com">stephanie@paboto.com</a><br>
+        <!-- TODO: confirm Instagram handle -->
+        <a href="https://instagram.com/paboto" rel="noopener">Instagram</a>
+      </p>
+      <!-- Opens the visitor's email app. Swap for a form service (e.g. Formspree) later if wanted. -->
+      <form action="mailto:stephanie@paboto.com" method="post" enctype="text/plain">
+        <input name="name" placeholder="Your name" required>
+        <input name="email" type="email" placeholder="Your email" required>
+        <textarea name="message" rows="5" placeholder="What are you planning?" required></textarea>
+        <button class="btn" type="submit">Send</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    <div class="wrap">PABOTO · Copenhagen · <a href="mailto:stephanie@paboto.com">stephanie@paboto.com</a></div>
+  </footer>
+</body>
+</html>
