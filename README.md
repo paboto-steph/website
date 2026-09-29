@@ -4,21 +4,15 @@ One-page site for PABOTO (Stephanie Pabotoy), creative consultant and photograph
 
 Plain HTML, CSS and JS. No build step. Open `index.html` in a browser to preview.
 
-## Sections
-1. Hero: positioning line and "Book a call"
-2. Client strip and proof numbers
-3. Selected work: 1664 Blanc x Boulebar, Strangas Gyros, La Banchina, plus a short "Also" list
-4. Photo work gallery (click to enlarge)
-5. Offers with from-prices and retainers
-6. How I work (5 steps)
-7. About
-8. Contact (the form opens the visitor's email app, no backend needed)
+## Pages
+- `index.html`: image-led home. Intro line, three photos, a work grid (click a project to see all its images), a short "Also" list, a price strip linking to Services, About and Contact.
+- `services.html`: packages with prices and expandable deliverables (workshop, photo and video, activation) and retainers (Light, Build, Run).
 
 ## Before going live
-- [ ] Check the Instagram handle in the contact section (currently `@paboto`)
+- [ ] Read through the deliverables on the Services page and adjust to how you actually work
 - [ ] Check the LinkedIn URL (currently `linkedin.com/in/stephaniepabotoy`)
-- [ ] Read through the case copy (Challenge and Idea lines are written from the portfolio, confirm they match how you'd tell it)
-- [ ] Add Google Search Console and submit `sitemap.xml` once a host is chosen
+- [ ] Add Oatly photos as a project when you have them
+- [ ] Add Google Search Console and submit a sitemap once the domain points here
 
 ## Images
 All images live in `/images`, compressed to under 400 KB, with descriptive file names and alt text for SEO.
