@@ -6,182 +6,344 @@
   <title>Kreativ konsulent og madfotograf København | PABOTO</title>
   <meta name="description" content="Culture activations, workshops and food photography for brands in Copenhagen. From-prices on the page. Book a call and get a clear first step.">
   <link rel="canonical" href="https://paboto.com/">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f1f1ec">
   <meta property="og:title" content="PABOTO | Creative consultant and photographer, Copenhagen">
   <meta property="og:description" content="Culture activations, workshops and food photography for brands in Copenhagen.">
   <meta property="og:url" content="https://paboto.com/">
   <meta property="og:type" content="website">
   <!-- TODO: add og:image once the hero photo is in /images -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
   <style>
+    /* Layout: a Copenhagen menu card. Calm paper page, one mustard band
+       where the prices live (set like a pølsevogn board), ink close for contact. */
     :root {
-      --bg: #f6f3ee;
-      --ink: #1c1b19;
-      --muted: #6b665e;
-      --line: #d9d3c8;
-      --accent: #1c1b19;
-      --placeholder: #e4ded3;
+      --paper: #f1f1ec;
+      --paper-2: #e3e3db;
+      --ink: #1b221d;
+      --muted: #5b625a;
+      --line: #cfd0c6;
+      --mustard: #e9c02b;
+      --mustard-ink: #1b221d;
+
+      --display: "Archivo", "Arial Narrow", Helvetica, Arial, sans-serif;
+      --body: "Source Serif 4", Georgia, "Times New Roman", serif;
+      --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+
+      --step-0: 1.0625rem;
+      --step-1: 1.3rem;
+      --step-2: clamp(1.75rem, 3.2vw, 2.4rem);
+      --step-3: clamp(2.3rem, 5.6vw, 4.25rem);
+
+      color-scheme: light;
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
     body {
       margin: 0;
-      background: var(--bg);
+      background: var(--paper);
       color: var(--ink);
-      font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+      font: 400 var(--step-0)/1.6 var(--body);
+      -webkit-font-smoothing: antialiased;
     }
-    a { color: inherit; }
-    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
-    header.top {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 20px 0;
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px; }
+    :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+
+    .wrap { max-width: 1180px; margin: 0 auto; padding-inline: 20px; }
+    .skip { position: absolute; left: -9999px; }
+    .skip:focus { left: 20px; top: 12px; background: var(--ink); color: var(--paper); padding: 8px 12px; z-index: 10; }
+
+    .label {
+      font: 500 0.75rem/1.3 var(--mono);
+      text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--muted);
+      margin: 0;
     }
-    .logo { font-weight: 700; letter-spacing: 0.12em; text-decoration: none; }
-    nav a { margin-left: 18px; text-decoration: none; color: var(--muted); font-size: 15px; }
-    nav a:hover { color: var(--ink); }
-    section { padding: 72px 0; border-top: 1px solid var(--line); }
-    .hero { border-top: 0; padding-top: 40px; }
-    .hero-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; }
-    h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.1; margin: 0 0 24px; font-weight: 600; }
-    h2 { font-size: 28px; margin: 0 0 32px; font-weight: 600; }
-    h3 { font-size: 20px; margin: 0 0 8px; }
+    h1, h2, h3 { font-family: var(--display); margin: 0; text-wrap: balance; }
+    h2 {
+      font-size: var(--step-2); line-height: 1.05;
+      font-weight: 750; font-stretch: 112%; letter-spacing: -0.015em;
+    }
+    h3 { font-size: var(--step-1); line-height: 1.15; font-weight: 700; font-stretch: 105%; }
+
     .btn {
-      display: inline-block; background: var(--accent); color: var(--bg);
-      padding: 14px 26px; text-decoration: none; border-radius: 2px; font-weight: 600;
+      display: inline-flex; align-items: center; gap: 10px;
+      font: 700 1rem/1 var(--display); font-stretch: 110%;
+      letter-spacing: 0.01em;
+      background: var(--ink); color: var(--paper);
+      padding: 16px 24px; border: 0; border-radius: 0;
+      text-decoration: none; cursor: pointer;
+      transition: background-color .15s ease, color .15s ease;
     }
-    .img {
-      background: var(--placeholder); width: 100%; aspect-ratio: 4 / 5;
-      display: flex; align-items: center; justify-content: center;
-      color: var(--muted); font-size: 14px; object-fit: cover;
+    .btn::after { content: "→"; transition: transform .15s ease; }
+    .btn:hover::after { transform: translateX(3px); }
+    .btn:hover { background: var(--mustard); color: var(--mustard-ink); }
+
+    .todo { background: var(--mustard); color: var(--mustard-ink); font: 500 0.8em/1 var(--mono); padding: 2px 5px; }
+
+    /* Placeholder frames, sized to the real crops */
+    .frame {
+      background: var(--paper-2);
+      width: 100%; max-width: 100%;
+      aspect-ratio: 4 / 5;
+      display: grid; place-items: end start;
+      padding: 12px;
+      object-fit: cover;
     }
-    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-    .price { font-weight: 600; margin: 12px 0 0; }
-    .note { color: var(--muted); font-size: 15px; margin-top: 32px; }
-    .case .img { aspect-ratio: 3 / 2; margin-bottom: 16px; }
-    .case ul { padding-left: 18px; margin: 8px 0; }
-    .label { color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; }
-    .about-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; align-items: start; }
-    .about-grid .img { aspect-ratio: 1; }
-    form { display: grid; gap: 12px; max-width: 520px; }
+    .frame span { font: 400 0.72rem/1.3 var(--mono); color: var(--muted); letter-spacing: 0.04em; }
+
+    /* Header */
+    header.top {
+      display: flex; justify-content: space-between; align-items: center; gap: 16px;
+      padding-block: 22px;
+    }
+    .logo {
+      font: 800 1.35rem/1 var(--display); font-stretch: 125%;
+      letter-spacing: 0.03em; text-decoration: none;
+    }
+    nav { display: flex; gap: 26px; }
+    nav a {
+      font: 500 0.78rem/1 var(--mono); text-transform: uppercase; letter-spacing: 0.1em;
+      text-decoration: none; color: var(--muted);
+    }
+    nav a:hover { color: var(--ink); text-decoration: underline; }
+
+    section { padding-block: clamp(56px, 8vw, 104px); }
+
+    /* Hero */
+    .hero { padding-block: clamp(24px, 4vw, 48px) clamp(56px, 8vw, 96px); }
+    .hero-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: clamp(28px, 5vw, 64px); align-items: end; }
+    .hero-copy { display: grid; gap: 28px; min-width: 0; }
+    h1 {
+      font-size: var(--step-3); line-height: 1.02;
+      font-weight: 750; font-stretch: 108%; letter-spacing: -0.025em;
+    }
+    h1 .turn {
+      display: block; margin-top: 0.15em;
+      font-family: var(--body); font-style: italic; font-weight: 400;
+      font-stretch: normal; letter-spacing: -0.02em;
+    }
+    .hero-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 20px 28px; }
+    .hero-meta .label { max-width: 22ch; }
+
+    /* Offers: the mustard menu board */
+    #services { background: var(--mustard); color: var(--mustard-ink); }
+    #services .label { color: var(--mustard-ink); opacity: .75; }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 12px 24px; flex-wrap: wrap; margin-bottom: clamp(28px, 4vw, 48px); }
+    .menu { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--mustard-ink); }
+    .menu > li {
+      display: grid; grid-template-columns: 1fr 1.3fr 1fr; gap: 12px 40px;
+      padding-block: 26px; border-bottom: 1px solid var(--mustard-ink);
+    }
+    .menu > li > * { min-width: 0; }
+    .menu p { margin: 0; max-width: 46ch; }
+    .prices { margin: 0; display: grid; gap: 6px; align-content: start; }
+    .prices div { display: flex; align-items: baseline; gap: 8px; }
+    .prices dt { flex: 1; display: flex; align-items: baseline; gap: 8px; font: 400 0.85rem/1.4 var(--mono); }
+    .prices dt::after { content: ""; flex: 1; border-bottom: 1px dotted currentColor; opacity: .6; transform: translateY(-3px); }
+    .prices dd { margin: 0; font: 500 0.9rem/1.4 var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .note { margin: 28px 0 0; max-width: 62ch; font-size: 0.95rem; }
+
+    /* Cases */
+    .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(28px, 3vw, 40px); }
+    .case { display: grid; gap: 14px; align-content: start; }
+    .case .frame { aspect-ratio: 4 / 5; }
+    .case dl { margin: 0; display: grid; gap: 10px; }
+    .case dt { font: 500 0.72rem/1.3 var(--mono); text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); }
+    .case dd { margin: 2px 0 0; }
+    .case ul { margin: 0; padding-left: 1.1em; }
+    .result { border-top: 1px solid var(--line); padding-top: 12px; margin: 0; }
+    .result strong { font: 750 1.6rem/1 var(--display); font-stretch: 112%; display: block; margin-bottom: 4px; }
+
+    /* About */
+    #about { border-top: 1px solid var(--line); }
+    .about-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: clamp(28px, 5vw, 72px); align-items: center; }
+    .about-grid .frame { aspect-ratio: 1; }
+    .about-copy { display: grid; gap: 18px; max-width: 58ch; }
+    .about-copy p { margin: 0; }
+    .about-copy .lead { font-size: var(--step-1); line-height: 1.45; }
+
+    /* Contact */
+    #contact { background: var(--ink); color: var(--paper); }
+    #contact .label { color: var(--paper); opacity: .65; }
+    .contact-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 88px); }
+    .contact-copy { display: grid; gap: 20px; align-content: start; }
+    .contact-copy p { margin: 0; max-width: 44ch; }
+    .email { font: 700 clamp(1.2rem, 2.4vw, 1.6rem)/1.2 var(--display); font-stretch: 105%; overflow-wrap: anywhere; }
+    form { display: grid; gap: 18px; }
+    .field { display: grid; gap: 6px; }
+    .field label { font: 500 0.72rem/1.3 var(--mono); text-transform: uppercase; letter-spacing: 0.1em; opacity: .75; }
     input, textarea {
-      font: inherit; padding: 12px; border: 1px solid var(--line); background: #fff; border-radius: 2px;
+      font: inherit; color: var(--ink); background: var(--paper);
+      padding: 13px 14px; border: 1px solid var(--paper); border-radius: 0; width: 100%;
     }
-    footer { padding: 32px 0; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
+    input:focus-visible, textarea:focus-visible { outline: 2px solid var(--mustard); outline-offset: 2px; }
+    #contact .btn { background: var(--mustard); color: var(--mustard-ink); justify-self: start; }
+    #contact .btn:hover { background: var(--paper); }
+    #contact :focus-visible { outline-color: var(--mustard); }
+
+    footer { background: var(--ink); color: var(--paper); border-top: 1px solid rgba(241, 241, 236, .15); }
+    footer .wrap { padding-block: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; font: 400 0.78rem/1.4 var(--mono); opacity: .7; }
+
+    @media (max-width: 860px) {
+      .menu > li { grid-template-columns: 1fr 1fr; }
+      .menu > li h3 { grid-column: 1 / -1; }
+    }
     @media (max-width: 760px) {
-      .hero-grid, .grid-3, .about-grid { grid-template-columns: 1fr; }
-      nav { display: none; }
-      section { padding: 48px 0; }
+      .hero-grid, .grid-3, .about-grid, .contact-grid, .menu > li { grid-template-columns: minmax(0, 1fr); }
+      nav a:not(:last-child) { display: none; }
+      nav a:last-child { color: var(--ink); border: 1px solid var(--ink); padding: 9px 12px; }
+      .hero-grid .frame { aspect-ratio: 4 / 3; order: -1; }
+      .about-grid .frame { max-width: 320px; }
     }
   </style>
 </head>
 <body>
   <!-- DRAFT COPY: every text block below needs Steph's sign-off before launch. -->
+  <a class="skip" href="#main">Skip to content</a>
   <div class="wrap">
     <header class="top">
       <a class="logo" href="/">PABOTO</a>
-      <nav>
+      <nav aria-label="Main">
         <a href="#services">Services</a>
         <a href="#cases">Cases</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
+  </div>
 
+  <main id="main">
     <!-- 1. Hero -->
     <section class="hero">
-      <div class="hero-grid">
-        <div>
-          <h1>I help food, hospitality and culture brands turn ideas into moments people show up for. Then I shoot them.</h1>
-          <a class="btn" href="#contact">Book a call</a>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="label">Creative consultant and photographer, Copenhagen</p>
+          <h1>I help food, hospitality and culture brands turn ideas into moments people show up for. <span class="turn">Then I shoot them.</span></h1>
+          <div class="hero-meta">
+            <a class="btn" href="#contact">Book a call</a>
+          </div>
         </div>
-        <!-- TODO: replace with <img src="/images/hero.jpg" alt="..."> (under 500 KB) -->
-        <div class="img" role="img" aria-label="Hero image placeholder">Hero image</div>
+        <!-- TODO: replace with <img class="frame" src="/images/hero.jpg" alt="..." width="1200" height="1500"> (under 500 KB) -->
+        <div class="frame" role="img" aria-label="Hero image placeholder"><span>Hero image · 4:5</span></div>
       </div>
     </section>
 
     <!-- 2. Offers -->
     <section id="services">
-      <h2>What you can book</h2>
-      <div class="grid-3">
-        <div>
-          <h3>Culture workshop</h3>
-          <p>A focused session with your team to find the idea worth building around, and a plan you can act on.</p>
-          <p class="price">From 6,500 kr half day / 10,000 kr day</p>
+      <div class="wrap">
+        <div class="section-head">
+          <h2>What you can book</h2>
+          <p class="label">From-prices · excl. moms</p>
         </div>
-        <div>
-          <h3>Photo and video</h3>
-          <p>Food, venue and event content, shot to be used. You get edited images ready for web and social.</p>
-          <p class="price">From 5,000 kr half day / 8,000 kr day</p>
-        </div>
-        <div>
-          <h3>Activation or retainer</h3>
-          <p>Concept, partner match, run-of-show and content on the day. Or a monthly retainer if you want me on call.</p>
-          <p class="price">Activation from 25,000 kr. Retainer from 10,000 kr/month</p>
-        </div>
+        <ul class="menu">
+          <li>
+            <h3>Culture workshop</h3>
+            <p>A focused session with your team to find the idea worth building around, and a plan you can act on.</p>
+            <dl class="prices">
+              <div><dt>Half day</dt><dd>6,500 kr</dd></div>
+              <div><dt>Day</dt><dd>10,000 kr</dd></div>
+            </dl>
+          </li>
+          <li>
+            <h3>Photo and video</h3>
+            <p>Food, venue and event content, shot to be used. You get edited images ready for web and social.</p>
+            <dl class="prices">
+              <div><dt>Half day</dt><dd>5,000 kr</dd></div>
+              <div><dt>Day</dt><dd>8,000 kr</dd></div>
+            </dl>
+          </li>
+          <li>
+            <h3>Activation or retainer</h3>
+            <p>Concept, partner match, run-of-show and content on the day. Or a monthly retainer if you want me on call.</p>
+            <dl class="prices">
+              <div><dt>Activation</dt><dd>25,000 kr</dd></div>
+              <div><dt>Retainer</dt><dd>10,000 kr/month</dd></div>
+            </dl>
+          </li>
+        </ul>
+        <p class="note">Prices are a starting point, adjusted to the scope and purpose of the job. Not sure yet? Start small with a half-day workshop or shoot.</p>
       </div>
-      <p class="note">All prices excl. moms. Prices are a starting point, adjusted to the scope and purpose of the job. Not sure yet? Start small with a half-day workshop or shoot.</p>
     </section>
 
     <!-- 3. Cases (facts to be confirmed by Steph) -->
     <section id="cases">
-      <h2>Selected work</h2>
-      <div class="grid-3">
-        <article class="case">
-          <div class="img" role="img" aria-label="1664 Blanc x Boulebar image placeholder">Case image</div>
-          <p class="label">1664 Blanc x Boulebar</p>
-          <p><strong>Challenge:</strong> TODO</p>
-          <p><strong>Idea:</strong> TODO</p>
-          <ul><li>TODO</li></ul>
-          <p><strong>Result:</strong> 257% growth in event attendance.</p>
-        </article>
-        <article class="case">
-          <div class="img" role="img" aria-label="Oatly image placeholder">Case image</div>
-          <p class="label">Oatly</p>
-          <p><strong>Challenge:</strong> TODO</p>
-          <p><strong>Idea:</strong> TODO</p>
-          <ul><li>Local activation content</li><li>Visual materials</li></ul>
-        </article>
-        <article class="case">
-          <div class="img" role="img" aria-label="Strangas Gyros image placeholder">Case image</div>
-          <p class="label">Strangas Gyros</p>
-          <p><strong>Challenge:</strong> TODO</p>
-          <p><strong>Idea:</strong> TODO</p>
-          <ul><li>TODO</li></ul>
-        </article>
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Selected work</h2>
+        </div>
+        <div class="grid-3">
+          <article class="case">
+            <div class="frame" role="img" aria-label="1664 Blanc x Boulebar image placeholder"><span>Case image · 4:5</span></div>
+            <h3>1664 Blanc x Boulebar</h3>
+            <dl>
+              <div><dt>Challenge</dt><dd><span class="todo">TODO</span></dd></div>
+              <div><dt>Idea</dt><dd><span class="todo">TODO</span></dd></div>
+              <div><dt>What I did</dt><dd><ul><li><span class="todo">TODO</span></li></ul></dd></div>
+            </dl>
+            <p class="result"><strong>257%</strong> growth in event attendance.</p>
+          </article>
+          <article class="case">
+            <div class="frame" role="img" aria-label="Oatly image placeholder"><span>Case image · 4:5</span></div>
+            <h3>Oatly</h3>
+            <dl>
+              <div><dt>Challenge</dt><dd><span class="todo">TODO</span></dd></div>
+              <div><dt>Idea</dt><dd><span class="todo">TODO</span></dd></div>
+              <div><dt>What I did</dt><dd><ul><li>Local activation content</li><li>Visual materials</li></ul></dd></div>
+            </dl>
+          </article>
+          <article class="case">
+            <div class="frame" role="img" aria-label="Strangas Gyros image placeholder"><span>Case image · 4:5</span></div>
+            <h3>Strangas Gyros</h3>
+            <dl>
+              <div><dt>Challenge</dt><dd><span class="todo">TODO</span></dd></div>
+              <div><dt>Idea</dt><dd><span class="todo">TODO</span></dd></div>
+              <div><dt>What I did</dt><dd><ul><li><span class="todo">TODO</span></li></ul></dd></div>
+            </dl>
+          </article>
+        </div>
       </div>
     </section>
 
     <!-- 4. About -->
     <section id="about">
-      <div class="about-grid">
-        <div class="img" role="img" aria-label="Portrait placeholder">Portrait</div>
-        <div>
+      <div class="wrap about-grid">
+        <div class="frame" role="img" aria-label="Portrait placeholder"><span>Portrait · 1:1</span></div>
+        <div class="about-copy">
           <h2>Hi, I'm Steph</h2>
-          <p>Most brands hire a strategist and a photographer separately. I do the thinking and the making, and I bring the right people into the room.</p>
-          <p>I'm a creative consultant and photographer based in Copenhagen, working with food, hospitality and culture brands. TODO: one or two more sentences in your own words.</p>
+          <p class="lead">Most brands hire a strategist and a photographer separately. I do the thinking and the making, and I bring the right people into the room.</p>
+          <p>I'm a creative consultant and photographer based in Copenhagen, working with food, hospitality and culture brands. <span class="todo">TODO</span> one or two more sentences in your own words.</p>
         </div>
       </div>
     </section>
 
     <!-- 5. Contact -->
     <section id="contact">
-      <h2>Get in touch</h2>
-      <p>Tell me a bit about what you're planning. I'll reply within two working days.</p>
-      <p>
-        <a href="mailto:stephanie@paboto.com">stephanie@paboto.com</a><br>
-        <!-- TODO: confirm Instagram handle -->
-        <a href="https://instagram.com/paboto" rel="noopener">Instagram</a>
-      </p>
-      <!-- Opens the visitor's email app. Swap for a form service (e.g. Formspree) later if wanted. -->
-      <form action="mailto:stephanie@paboto.com" method="post" enctype="text/plain">
-        <input name="name" placeholder="Your name" required>
-        <input name="email" type="email" placeholder="Your email" required>
-        <textarea name="message" rows="5" placeholder="What are you planning?" required></textarea>
-        <button class="btn" type="submit">Send</button>
-      </form>
+      <div class="wrap contact-grid">
+        <div class="contact-copy">
+          <h2>Get in touch</h2>
+          <p>Tell me a bit about what you're planning. I'll reply within two working days.</p>
+          <a class="email" href="mailto:stephanie@paboto.com">stephanie@paboto.com</a>
+          <!-- TODO: confirm Instagram handle -->
+          <a class="label" href="https://instagram.com/paboto" rel="noopener">Instagram</a>
+        </div>
+        <!-- Opens the visitor's email app. Swap for a form service (e.g. Formspree) later if wanted. -->
+        <form action="mailto:stephanie@paboto.com" method="post" enctype="text/plain">
+          <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="f-email">Your email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="f-message">What are you planning?</label><textarea id="f-message" name="message" rows="5" required></textarea></div>
+          <button class="btn" type="submit">Send</button>
+        </form>
+      </div>
     </section>
-  </div>
+  </main>
 
   <footer>
-    <div class="wrap">PABOTO · Copenhagen · <a href="mailto:stephanie@paboto.com">stephanie@paboto.com</a></div>
+    <div class="wrap"><span>PABOTO · Copenhagen</span><a href="mailto:stephanie@paboto.com">stephanie@paboto.com</a></div>
   </footer>
 </body>
 </html>
