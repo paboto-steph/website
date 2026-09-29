@@ -14,36 +14,47 @@
     reveals.forEach(function (el) { el.classList.add('in'); });
   }
 
-  // Project viewer: opens a project's images from its <template>
-  var viewer = document.getElementById('viewer');
-  if (viewer) {
-    var title = viewer.querySelector('.viewer-title');
-    var body = viewer.querySelector('.viewer-body');
-    var lastFocus = null;
-
-    function open(tile) {
-      lastFocus = document.activeElement;
-      title.innerHTML = tile.querySelector('.cap-title').innerHTML;
-      body.innerHTML = '';
-      body.appendChild(tile.querySelector('template').content.cloneNode(true));
-      viewer.hidden = false;
-      viewer.scrollTop = 0;
-      document.body.style.overflow = 'hidden';
-      viewer.querySelector('.viewer-close').focus();
+  // Opening stage: one image at a time, moving between three positions.
+  // Hovering pauses it; clicking opens the project.
+  var stage = document.getElementById('stage');
+  if (stage) {
+    var items = stage.querySelectorAll('.stage-item');
+    var cap = document.getElementById('stage-cap');
+    var i = 0, slot = 1, paused = false;
+    function show(n) {
+      items.forEach(function (el) { el.classList.remove('is-active'); });
+      var el = items[n];
+      el.dataset.slot = slot;
+      el.classList.add('is-active');
+      cap.textContent = el.dataset.caption;
     }
-    function close() {
-      viewer.hidden = true;
-      document.body.style.overflow = '';
-      if (lastFocus) lastFocus.focus();
+    show(0);
+    if (!reduced) {
+      setInterval(function () {
+        if (paused || document.hidden) return;
+        i = (i + 1) % items.length;
+        slot = (slot + 1 + Math.floor(Math.random() * 2)) % 3;
+        show(i);
+      }, 1400);
     }
-    document.querySelectorAll('[data-project]').forEach(function (tile) {
-      tile.querySelector('.tile-btn').addEventListener('click', function () { open(tile); });
-    });
-    viewer.querySelector('.viewer-close').addEventListener('click', close);
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && !viewer.hidden) close();
-    });
+    stage.addEventListener('mouseenter', function () { paused = true; });
+    stage.addEventListener('mouseleave', function () { paused = false; });
+    stage.addEventListener('focusin', function () { paused = true; });
+    stage.addEventListener('focusout', function () { paused = false; });
   }
+
+  // Work index: filter by sector
+  var filters = document.querySelectorAll('.filter');
+  filters.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var f = btn.dataset.filter;
+      filters.forEach(function (b) { b.classList.toggle('is-on', b === btn); });
+      document.querySelectorAll('#grid .tile').forEach(function (t) {
+        t.hidden = f !== 'all' && t.dataset.sectors.split(' ').indexOf(f) === -1;
+        if (!t.hidden) t.classList.add('in');
+      });
+    });
+  });
 
   // Contact form: build an email so it works without a backend
   var form = document.getElementById('contact-form');
