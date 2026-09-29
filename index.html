@@ -4,201 +4,270 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kreativ konsulent og madfotograf København | PABOTO</title>
-  <meta name="description" content="Culture activations, workshops and food photography for brands in Copenhagen. From-prices on the page. Book a call and get a clear first step.">
+  <meta name="description" content="Brand activations, social first content and food and event photography for brands in Copenhagen. See the work, the packages and book a call.">
   <link rel="canonical" href="https://paboto.com/">
   <meta name="color-scheme" content="light">
-  <meta name="theme-color" content="#f1f1ec">
+  <meta name="theme-color" content="#f16263">
   <meta property="og:title" content="PABOTO | Creative consultant and photographer, Copenhagen">
-  <meta property="og:description" content="Culture activations, workshops and food photography for brands in Copenhagen.">
+  <meta property="og:description" content="Brand activations, social first content and photography for food, hospitality and culture brands in Copenhagen.">
   <meta property="og:url" content="https://paboto.com/">
   <meta property="og:type" content="website">
-  <!-- TODO: add og:image once the hero photo is in /images -->
+  <meta property="og:image" content="https://paboto.com/images/hero-boulebar-petanque-copenhagen.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300..800&display=swap">
   <style>
-    /* Layout: a Copenhagen menu card. Calm paper page, one mustard band
-       where the prices live (set like a pølsevogn board), ink close for contact. */
+    /* Layout: the portfolio deck on the web. White pages, coral divider blocks,
+       a full-width photo reel that cuts image on top of image, each tied to its case. */
     :root {
-      --paper: #f1f1ec;
-      --paper-2: #e3e3db;
-      --ink: #1b221d;
-      --muted: #5b625a;
-      --line: #cfd0c6;
-      --mustard: #e9c02b;
-      --mustard-ink: #1b221d;
+      --paper: #ffffff;
+      --coral: #f16263;
+      --coral-text: #c9383a;
+      --blush: #fdf0ef;
+      --ink: #1d1d1d;
+      --grey: #626262;
+      --line: #ececec;
 
-      --display: "Archivo", "Arial Narrow", Helvetica, Arial, sans-serif;
-      --body: "Source Serif 4", Georgia, "Times New Roman", serif;
-      --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+      --sans: "Archivo", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
       --step-0: 1.0625rem;
-      --step-1: 1.3rem;
-      --step-2: clamp(1.75rem, 3.2vw, 2.4rem);
-      --step-3: clamp(2.3rem, 5.6vw, 4.25rem);
+      --step-1: 1.25rem;
+      --step-2: clamp(1.6rem, 3vw, 2.25rem);
+      --step-3: clamp(2.1rem, 4.6vw, 3.6rem);
 
       color-scheme: light;
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
     body {
       margin: 0;
       background: var(--paper);
       color: var(--ink);
-      font: 400 var(--step-0)/1.6 var(--body);
+      font: 350 var(--step-0)/1.6 var(--sans);
       -webkit-font-smoothing: antialiased;
     }
     img { max-width: 100%; display: block; }
     a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px; }
-    :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
-
-    .wrap { max-width: 1180px; margin: 0 auto; padding-inline: 20px; }
+    :focus-visible { outline: 2px solid var(--coral-text); outline-offset: 3px; }
+    .wrap { max-width: 1280px; margin: 0 auto; padding-inline: 20px; }
     .skip { position: absolute; left: -9999px; }
-    .skip:focus { left: 20px; top: 12px; background: var(--ink); color: var(--paper); padding: 8px 12px; z-index: 10; }
+    .skip:focus { left: 20px; top: 12px; background: var(--ink); color: var(--paper); padding: 8px 12px; z-index: 20; }
 
-    .label {
-      font: 500 0.75rem/1.3 var(--mono);
-      text-transform: uppercase; letter-spacing: 0.1em;
-      color: var(--muted);
-      margin: 0;
-    }
-    h1, h2, h3 { font-family: var(--display); margin: 0; text-wrap: balance; }
+    h1, h2, h3 { margin: 0; text-wrap: balance; font-family: var(--sans); }
     h2 {
-      font-size: var(--step-2); line-height: 1.05;
-      font-weight: 750; font-stretch: 112%; letter-spacing: -0.015em;
+      font-size: var(--step-2); line-height: 1.05; font-weight: 750;
+      text-transform: uppercase; letter-spacing: 0.005em; color: var(--coral);
     }
-    h3 { font-size: var(--step-1); line-height: 1.15; font-weight: 700; font-stretch: 105%; }
+    h3 { font-size: var(--step-1); line-height: 1.2; font-weight: 750; text-transform: uppercase; color: var(--coral-text); letter-spacing: 0.01em; }
+    .kicker { margin: 0; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--grey); }
+    .lede { margin: 0; color: var(--grey); max-width: 52ch; }
+    .todo { background: var(--coral); color: #fff; font-size: 0.75em; font-weight: 700; padding: 1px 5px; }
 
     .btn {
       display: inline-flex; align-items: center; gap: 10px;
-      font: 700 1rem/1 var(--display); font-stretch: 110%;
-      letter-spacing: 0.01em;
+      font: 700 0.95rem/1 var(--sans); text-transform: uppercase; letter-spacing: 0.06em;
       background: var(--ink); color: var(--paper);
-      padding: 16px 24px; border: 0; border-radius: 0;
-      text-decoration: none; cursor: pointer;
+      padding: 17px 24px; border: 0; border-radius: 0; text-decoration: none; cursor: pointer;
       transition: background-color .15s ease, color .15s ease;
     }
-    .btn::after { content: "→"; transition: transform .15s ease; }
+    .btn::after { content: "⟶"; font-weight: 400; transition: transform .15s ease; }
     .btn:hover::after { transform: translateX(3px); }
-    .btn:hover { background: var(--mustard); color: var(--mustard-ink); }
+    .btn:hover { background: var(--coral-text); }
+    .btn.light { background: var(--paper); color: var(--ink); }
+    .btn.light:hover { background: var(--ink); color: var(--paper); }
 
-    .todo { background: var(--mustard); color: var(--mustard-ink); font: 500 0.8em/1 var(--mono); padding: 2px 5px; }
-
-    /* Placeholder frames, sized to the real crops */
-    .frame {
-      background: var(--paper-2);
-      width: 100%; max-width: 100%;
-      aspect-ratio: 4 / 5;
-      display: grid; place-items: end start;
-      padding: 12px;
-      object-fit: cover;
-    }
-    .frame span { font: 400 0.72rem/1.3 var(--mono); color: var(--muted); letter-spacing: 0.04em; }
+    section { padding-block: clamp(64px, 9vw, 120px); }
+    .section-head { display: grid; gap: 14px; margin-bottom: clamp(32px, 5vw, 56px); }
 
     /* Header */
-    header.top {
-      display: flex; justify-content: space-between; align-items: center; gap: 16px;
-      padding-block: 22px;
-    }
-    .logo {
-      font: 800 1.35rem/1 var(--display); font-stretch: 125%;
-      letter-spacing: 0.03em; text-decoration: none;
-    }
+    header.top { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-block: 20px; }
+    .logo img { width: 116px; height: auto; }
     nav { display: flex; gap: 26px; }
-    nav a {
-      font: 500 0.78rem/1 var(--mono); text-transform: uppercase; letter-spacing: 0.1em;
-      text-decoration: none; color: var(--muted);
-    }
-    nav a:hover { color: var(--ink); text-decoration: underline; }
+    nav a { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; text-decoration: none; color: var(--grey); }
+    nav a:hover { color: var(--coral-text); }
 
-    section { padding-block: clamp(56px, 8vw, 104px); }
+    /* Reel */
+    .reel-wrap { padding-bottom: 0; }
+    .reel {
+      position: relative; overflow: hidden;
+      height: clamp(420px, 74svh, 820px);
+      container-type: size;
+      background: var(--paper);
+      cursor: pointer;
+    }
+    .reel .frame {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center; gap: 1.2cqw;
+    }
+    .reel .frame img { object-fit: cover; box-shadow: 0 1px 0 rgba(0,0,0,.02); }
+    .frame.mid img    { height: 78cqh; width: auto; max-width: 70cqw; }
+    .frame.tall img   { height: 94cqh; width: auto; max-width: 70cqw; }
+    .frame.small img  { height: 50cqh; width: auto; max-width: 50cqw; }
+    .frame.pair img   { height: 86cqh; width: auto; max-width: 44cqw; }
+    .frame.wide img   { width: 74cqw; height: auto; max-height: 86cqh; }
+    .frame.full img   { width: 100%; height: 100%; }
+    .frame.left  { justify-content: flex-start; padding-left: 12cqw; }
+    .frame.right { justify-content: flex-end; padding-right: 12cqw; }
+    .frame.enter img { animation: reel-in .55s cubic-bezier(.2,.7,.1,1) both; }
+    .frame.enter img + img { animation-delay: .09s; }
+    @keyframes reel-in {
+      from { clip-path: inset(100% 0 0 0); transform: translateY(3%); }
+      to   { clip-path: inset(0 0 0 0);    transform: none; }
+    }
+    .reel-bar {
+      display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 8px 20px;
+      padding-block: 14px; border-bottom: 1px solid var(--line);
+    }
+    .reel-caption { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; min-width: 0; text-decoration: none; }
+    .reel-caption strong { font-weight: 750; text-transform: uppercase; letter-spacing: 0.04em; color: var(--coral-text); font-size: 0.9rem; }
+    .reel-caption span { color: var(--grey); font-size: 0.85rem; }
+    .reel-caption:hover strong { text-decoration: underline; }
+    .reel-controls { display: flex; align-items: center; gap: 4px; }
+    .reel-count { font-size: 0.8rem; color: var(--grey); font-variant-numeric: tabular-nums; margin-right: 8px; }
+    .reel-controls button {
+      font: 600 0.75rem/1 var(--sans); text-transform: uppercase; letter-spacing: 0.08em;
+      background: none; border: 1px solid var(--line); color: var(--ink);
+      padding: 9px 11px; cursor: pointer;
+    }
+    .reel-controls button:hover { border-color: var(--ink); }
+    .reel-progress { height: 2px; background: var(--line); }
+    .reel-progress i { display: block; height: 100%; width: 0; background: var(--coral); }
 
-    /* Hero */
-    .hero { padding-block: clamp(24px, 4vw, 48px) clamp(56px, 8vw, 96px); }
-    .hero-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: clamp(28px, 5vw, 64px); align-items: end; }
-    .hero-copy { display: grid; gap: 28px; min-width: 0; }
-    h1 {
-      font-size: var(--step-3); line-height: 1.02;
-      font-weight: 750; font-stretch: 108%; letter-spacing: -0.025em;
-    }
-    h1 .turn {
-      display: block; margin-top: 0.15em;
-      font-family: var(--body); font-style: italic; font-weight: 400;
-      font-stretch: normal; letter-spacing: -0.02em;
-    }
-    .hero-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 20px 28px; }
-    .hero-meta .label { max-width: 22ch; }
+    /* Intro, the coral cover block */
+    .intro { background: var(--coral); color: #fff; }
+    .intro-grid { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 32px 64px; align-items: end; }
+    .intro .name { margin: 0 0 18px; font-size: 1.2rem; font-weight: 750; text-transform: uppercase; letter-spacing: 0.04em; }
+    .intro .name span { font-weight: 350; display: block; }
+    h1 { font-size: var(--step-3); line-height: 1.04; font-weight: 750; letter-spacing: -0.01em; }
+    .intro-side { display: grid; gap: 22px; justify-items: start; }
+    .intro-side p { margin: 0; font-size: 1.2rem; font-weight: 550; line-height: 1.45; }
 
-    /* Offers: the mustard menu board */
-    #services { background: var(--mustard); color: var(--mustard-ink); }
-    #services .label { color: var(--mustard-ink); opacity: .75; }
-    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 12px 24px; flex-wrap: wrap; margin-bottom: clamp(28px, 4vw, 48px); }
-    .menu { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--mustard-ink); }
-    .menu > li {
-      display: grid; grid-template-columns: 1fr 1.3fr 1fr; gap: 12px 40px;
-      padding-block: 26px; border-bottom: 1px solid var(--mustard-ink);
-    }
-    .menu > li > * { min-width: 0; }
-    .menu p { margin: 0; max-width: 46ch; }
-    .prices { margin: 0; display: grid; gap: 6px; align-content: start; }
-    .prices div { display: flex; align-items: baseline; gap: 8px; }
-    .prices dt { flex: 1; display: flex; align-items: baseline; gap: 8px; font: 400 0.85rem/1.4 var(--mono); }
-    .prices dt::after { content: ""; flex: 1; border-bottom: 1px dotted currentColor; opacity: .6; transform: translateY(-3px); }
-    .prices dd { margin: 0; font: 500 0.9rem/1.4 var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
-    .note { margin: 28px 0 0; max-width: 62ch; font-size: 0.95rem; }
+    /* Brands */
+    .brands { padding-block: 26px; border-bottom: 1px solid var(--line); overflow: hidden; }
+    .brands-inner { display: flex; align-items: center; gap: 24px; }
+    .brands .kicker { flex: none; }
+    .marquee { overflow: hidden; flex: 1; min-width: 0; mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+    .marquee-track { display: flex; width: max-content; animation: marquee 40s linear infinite; }
+    .marquee:hover .marquee-track { animation-play-state: paused; }
+    .marquee ul { display: flex; gap: 44px; margin: 0; padding: 0 44px 0 0; list-style: none; }
+    .marquee li { font-weight: 750; text-transform: uppercase; letter-spacing: 0.03em; white-space: nowrap; font-size: 1.05rem; }
+    @keyframes marquee { to { transform: translateX(-50%); } }
 
     /* Cases */
-    .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(28px, 3vw, 40px); }
-    .case { display: grid; gap: 14px; align-content: start; }
-    .case .frame { aspect-ratio: 4 / 5; }
-    .case dl { margin: 0; display: grid; gap: 10px; }
-    .case dt { font: 500 0.72rem/1.3 var(--mono); text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); }
-    .case dd { margin: 2px 0 0; }
-    .case ul { margin: 0; padding-left: 1.1em; }
-    .result { border-top: 1px solid var(--line); padding-top: 12px; margin: 0; }
-    .result strong { font: 750 1.6rem/1 var(--display); font-stretch: 112%; display: block; margin-bottom: 4px; }
+    .cases { display: grid; }
+    .case {
+      display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr); gap: 20px 56px;
+      padding-block: 40px; border-top: 1px solid var(--line);
+      scroll-margin-top: 20px;
+    }
+    .case:target { background: linear-gradient(var(--blush), var(--blush)) no-repeat; background-size: 100% 100%; }
+    .case-text { display: grid; gap: 12px; align-content: start; }
+    .case .role { margin: 0; color: var(--coral); font-weight: 450; }
+    .case ul { margin: 0; padding-left: 1.1em; color: var(--grey); }
+    .case li + li { margin-top: 4px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 0; padding: 0; list-style: none; }
+    .tags li { font-size: 0.72rem; font-weight: 650; text-transform: uppercase; letter-spacing: 0.08em; border: 1px solid var(--coral); color: var(--coral-text); padding: 5px 8px; }
+    .result { margin: 6px 0 0; color: var(--grey); }
+    .result strong { display: block; font-size: 2.4rem; line-height: 1; font-weight: 800; color: var(--coral); margin-bottom: 6px; }
+    .case-strip { display: flex; gap: 10px; overflow-x: auto; scrollbar-width: thin; align-self: start; }
+    .case-strip img { height: clamp(220px, 26vw, 340px); width: auto; flex: none; object-fit: cover; }
+
+    /* Results */
+    .results { background: var(--blush); }
+    .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; }
+    .stat { display: grid; gap: 10px; align-content: start; border-top: 2px solid var(--coral); padding-top: 18px; }
+    .stat strong { font-size: clamp(2.4rem, 4vw, 3.4rem); line-height: 1; font-weight: 800; color: var(--coral); font-variant-numeric: tabular-nums; }
+    .stat p { margin: 0; color: var(--grey); font-size: 0.95rem; }
+    .stat b { color: var(--ink); font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; font-size: 0.85rem; }
+
+    /* Services */
+    .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; }
+    .service { display: grid; gap: 10px; align-content: start; }
+    .service p { margin: 0; color: var(--grey); }
+    .process { margin-top: clamp(48px, 7vw, 88px); }
+    .process ol { list-style: none; margin: 24px 0 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 24px; counter-reset: phase; }
+    .process li { counter-increment: phase; display: grid; gap: 6px; align-content: start; border-top: 1px solid var(--coral); padding-top: 14px; position: relative; }
+    .process li::before { content: "Phase " counter(phase); font-size: 0.75rem; font-weight: 650; text-transform: uppercase; letter-spacing: 0.08em; color: var(--coral-text); }
+    .process li::after { content: ""; position: absolute; top: -5px; left: 0; width: 9px; height: 9px; border-radius: 50%; background: var(--coral); }
+    .process b { font-weight: 700; }
+    .process span { color: var(--grey); font-size: 0.92rem; }
+
+    /* Pricing */
+    #pricing { border-top: 1px solid var(--line); }
+    .plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+    .plan { border: 1px solid var(--line); padding: 30px 28px; display: grid; gap: 14px; align-content: start; }
+    .plan.feature { background: var(--coral); border-color: var(--coral); color: #fff; }
+    .plan.feature h3, .plan.feature .price small, .plan.feature p { color: #fff; }
+    .price { margin: 0; font-size: clamp(1.9rem, 3vw, 2.4rem); line-height: 1.05; font-weight: 800; font-variant-numeric: tabular-nums; }
+    .price small { display: block; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--grey); margin-bottom: 6px; }
+    .plan p { margin: 0; color: var(--grey); }
+    .plan.feature p { font-weight: 500; }
+    .note { margin: 24px 0 0; color: var(--grey); font-size: 0.95rem; max-width: 70ch; }
 
     /* About */
     #about { border-top: 1px solid var(--line); }
-    .about-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: clamp(28px, 5vw, 72px); align-items: center; }
-    .about-grid .frame { aspect-ratio: 1; }
+    .about-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: clamp(32px, 6vw, 88px); align-items: center; }
+    .about-grid img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
     .about-copy { display: grid; gap: 18px; max-width: 58ch; }
-    .about-copy p { margin: 0; }
-    .about-copy .lead { font-size: var(--step-1); line-height: 1.45; }
+    .about-copy p { margin: 0; color: var(--grey); }
+    .about-copy blockquote { margin: 8px 0 0; font-size: var(--step-1); font-weight: 650; color: var(--coral-text); line-height: 1.35; }
 
     /* Contact */
-    #contact { background: var(--ink); color: var(--paper); }
-    #contact .label { color: var(--paper); opacity: .65; }
-    .contact-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 88px); }
+    #contact { background: var(--coral); color: #fff; }
+    #contact h2 { color: #fff; }
+    .contact-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: clamp(32px, 6vw, 88px); }
     .contact-copy { display: grid; gap: 20px; align-content: start; }
-    .contact-copy p { margin: 0; max-width: 44ch; }
-    .email { font: 700 clamp(1.2rem, 2.4vw, 1.6rem)/1.2 var(--display); font-stretch: 105%; overflow-wrap: anywhere; }
-    form { display: grid; gap: 18px; }
+    .contact-copy p { margin: 0; font-size: 1.2rem; font-weight: 550; line-height: 1.45; max-width: 36ch; }
+    .contact-links { display: grid; gap: 8px; font-size: 1.2rem; font-weight: 650; }
+    .contact-links a { overflow-wrap: anywhere; }
+    form { background: var(--paper); color: var(--ink); padding: clamp(22px, 3vw, 36px); display: grid; gap: 16px; }
+    .row-2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
     .field { display: grid; gap: 6px; }
-    .field label { font: 500 0.72rem/1.3 var(--mono); text-transform: uppercase; letter-spacing: 0.1em; opacity: .75; }
-    input, textarea {
-      font: inherit; color: var(--ink); background: var(--paper);
-      padding: 13px 14px; border: 1px solid var(--paper); border-radius: 0; width: 100%;
+    .field label { font-size: 0.75rem; font-weight: 650; text-transform: uppercase; letter-spacing: 0.08em; color: var(--grey); }
+    input, textarea, select {
+      font: inherit; font-weight: 400; color: var(--ink); background: var(--paper);
+      padding: 12px 13px; border: 1px solid #d6d6d6; border-radius: 0; width: 100%;
     }
-    input:focus-visible, textarea:focus-visible { outline: 2px solid var(--mustard); outline-offset: 2px; }
-    #contact .btn { background: var(--mustard); color: var(--mustard-ink); justify-self: start; }
-    #contact .btn:hover { background: var(--paper); }
-    #contact :focus-visible { outline-color: var(--mustard); }
+    input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 2px solid var(--coral); outline-offset: 1px; }
+    form .btn { justify-self: start; }
+    .form-status { margin: 0; font-size: 0.9rem; color: var(--grey); }
 
-    footer { background: var(--ink); color: var(--paper); border-top: 1px solid rgba(241, 241, 236, .15); }
-    footer .wrap { padding-block: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; font: 400 0.78rem/1.4 var(--mono); opacity: .7; }
+    footer .wrap { padding-block: 28px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px 24px; font-size: 0.85rem; color: var(--grey); }
+    footer img { width: 92px; height: auto; }
 
-    @media (max-width: 860px) {
-      .menu > li { grid-template-columns: 1fr 1fr; }
-      .menu > li h3 { grid-column: 1 / -1; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .frame.enter img { animation: none; }
+      .marquee-track { animation: none; }
+      .marquee ul[aria-hidden] { display: none; }
+      .marquee ul { flex-wrap: wrap; row-gap: 8px; }
+      .marquee { mask-image: none; }
+    }
+    @media (max-width: 980px) {
+      .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .process ol { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .case { grid-template-columns: minmax(0, 1fr); }
     }
     @media (max-width: 760px) {
-      .hero-grid, .grid-3, .about-grid, .contact-grid, .menu > li { grid-template-columns: minmax(0, 1fr); }
       nav a:not(:last-child) { display: none; }
       nav a:last-child { color: var(--ink); border: 1px solid var(--ink); padding: 9px 12px; }
-      .hero-grid .frame { aspect-ratio: 4 / 3; order: -1; }
-      .about-grid .frame { max-width: 320px; }
+      .reel { height: clamp(380px, 64svh, 620px); }
+      .frame.left, .frame.right { padding: 0; justify-content: center; }
+      .frame.mid img, .frame.tall img { max-width: 92cqw; }
+      .frame.small img { height: 62cqh; max-width: 80cqw; }
+      .frame.pair { gap: 2cqw; }
+      .frame.pair img { max-width: 47cqw; height: 70cqh; }
+      .reel-bar { grid-template-columns: minmax(0, 1fr); }
+      .reel-controls { justify-content: space-between; }
+      .frame.wide img { width: 100cqw; }
+      .intro-grid, .grid-3, .plans, .about-grid, .contact-grid, .row-2 { grid-template-columns: minmax(0, 1fr); }
+      .brands-inner { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .marquee { width: 100%; }
+      .process ol { grid-template-columns: minmax(0, 1fr); }
+      .about-grid img { max-width: 360px; }
+    }
+    @media (max-width: 480px) {
+      .stats { grid-template-columns: minmax(0, 1fr); }
     }
   </style>
 </head>
@@ -207,10 +276,11 @@
   <a class="skip" href="#main">Skip to content</a>
   <div class="wrap">
     <header class="top">
-      <a class="logo" href="/">PABOTO</a>
+      <a class="logo" href="/"><img src="images/logo-coral.png" alt="PABOTO" width="311" height="56"></a>
       <nav aria-label="Main">
+        <a href="#work">Work</a>
         <a href="#services">Services</a>
-        <a href="#cases">Cases</a>
+        <a href="#pricing">Pricing</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -218,132 +288,435 @@
   </div>
 
   <main id="main">
-    <!-- 1. Hero -->
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div class="hero-copy">
-          <p class="label">Creative consultant and photographer, Copenhagen</p>
-          <h1>I help food, hospitality and culture brands turn ideas into moments people show up for. <span class="turn">Then I shoot them.</span></h1>
-          <div class="hero-meta">
-            <a class="btn" href="#contact">Book a call</a>
+    <!-- 1. Reel: builds itself from the case photos below. First frame is static so the page reads without JS. -->
+    <section class="reel-wrap" aria-label="Photo reel" style="padding-top:0">
+      <div class="wrap">
+        <div class="reel" id="reel">
+          <div class="frame full"><img src="images/hero-boulebar-petanque-copenhagen.jpg" alt="Guests cheering at the Sunday pétanque series, Boulebar Copenhagen" width="1006" height="1601" fetchpriority="high"></div>
+        </div>
+        <div class="reel-progress" aria-hidden="true"><i id="reel-progress"></i></div>
+        <div class="reel-bar">
+          <a class="reel-caption" id="reel-caption" href="#boulebar"><strong>1664 Blanc x Boulebar</strong><span>Creative consultant · Social first · Photographer</span></a>
+          <div class="reel-controls">
+            <span class="reel-count" id="reel-count" aria-live="off">01 / 24</span>
+            <button type="button" id="reel-prev" aria-label="Previous photo">Prev</button>
+            <button type="button" id="reel-toggle" aria-label="Pause the reel">Pause</button>
+            <button type="button" id="reel-next" aria-label="Next photo">Next</button>
           </div>
         </div>
-        <!-- TODO: replace with <img class="frame" src="/images/hero.jpg" alt="..." width="1200" height="1500"> (under 500 KB) -->
-        <div class="frame" role="img" aria-label="Hero image placeholder"><span>Hero image · 4:5</span></div>
       </div>
     </section>
 
-    <!-- 2. Offers -->
+    <!-- 2. Intro -->
+    <section class="intro">
+      <div class="wrap intro-grid">
+        <div>
+          <p class="name">Stephanie Pabotoy <span>Creative consultant and photographer, Copenhagen</span></p>
+          <h1>I help food, hospitality and culture brands turn ideas into moments people show up for. Then I shoot them.</h1>
+        </div>
+        <div class="intro-side">
+          <p>Strategy, activation and the photos, from one person. I bring the right people into the room.</p>
+          <a class="btn light" href="#contact">Book a call</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Brands -->
+    <div class="brands" aria-label="Brands I've worked with">
+      <div class="wrap brands-inner">
+        <p class="kicker">Brands I've worked with</p>
+        <div class="marquee">
+          <div class="marquee-track">
+            <ul>
+              <li>1664 Blanc</li><li>Boulebar</li><li>Oatly</li><li>Zentropa</li><li>La Banchina</li><li>Strangas Gyros</li><li>Enghave Kaffe</li><li>Kopenhagen Fur</li><li>Grandhood</li><li>Palma</li><li>Mensch</li><li>SOS Børnebyerne</li><li>Danish Coffee Festival</li><li>Søpavilionen</li>
+            </ul>
+            <ul aria-hidden="true">
+              <li>1664 Blanc</li><li>Boulebar</li><li>Oatly</li><li>Zentropa</li><li>La Banchina</li><li>Strangas Gyros</li><li>Enghave Kaffe</li><li>Kopenhagen Fur</li><li>Grandhood</li><li>Palma</li><li>Mensch</li><li>SOS Børnebyerne</li><li>Danish Coffee Festival</li><li>Søpavilionen</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Cases. Each case feeds its photos into the reel above. -->
+    <section id="work">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Selected creative projects</h2>
+          <p class="lede">Every photo in the reel belongs to one of these. Here's what I did for each client.</p>
+        </div>
+        <div class="cases">
+          <article class="case" id="boulebar" data-services="Creative consultant · Social first · Photographer">
+            <div class="case-text">
+              <h3>1664 Blanc x Boulebar</h3>
+              <p class="role">Brand partnership and social first</p>
+              <ul>
+                <li>Developed and pitched a summer brand partnership from scratch</li>
+                <li>Ran a Sunday pétanque series through the summer</li>
+                <li>Featured on The Jungle List, and continuing this summer</li>
+              </ul>
+              <p class="result"><strong>257%</strong>growth in event attendance over 5 summer events. All organic, including all visuals.</p>
+              <ul class="tags"><li>Creative consultant</li><li>Social first</li><li>Photographer</li></ul>
+            </div>
+            <div class="case-strip">
+              <img loading="lazy" src="images/boulebar-1664-french-summer-moments.jpg" alt="French Summer Moments, pétanque event by Boulebar and 1664 Blanc in Copenhagen" width="1401" height="874">
+              <img loading="lazy" src="images/boulebar-1664-petanque-event-copenhagen.jpg" alt="Player throwing a boule at the Boulebar pétanque event, Copenhagen" width="833" height="1401">
+              <img loading="lazy" src="images/boulebar-1664-blanc-summer-event.jpg" alt="Guest holding a 1664 Blanc at a summer event, Copenhagen" width="934" height="1401">
+              <img loading="lazy" src="images/boulebar-1664-petanque-friends.jpg" alt="Friends celebrating a throw at Boulebar, Copenhagen" width="844" height="1401">
+            </div>
+          </article>
+
+          <article class="case" id="zentropa" data-services="Casting · Photographer · Sponsorship">
+            <div class="case-text">
+              <h3>Zentropa · Lucky</h3>
+              <p class="role">Casting and launch</p>
+              <ul>
+                <li>Cast a niche character for the Zentropa film production</li>
+                <li>Behind the scenes photography on set</li>
+                <li>Secured sponsorship for the gala premiere</li>
+              </ul>
+              <ul class="tags"><li>Creative consultant</li><li>Photographer</li></ul>
+            </div>
+            <div class="case-strip">
+              <img loading="lazy" src="images/zentropa-lucky-gallapremiere.jpg" alt="Gala premiere of the film Lucky with sponsor wall, Copenhagen" width="1401" height="856">
+              <img loading="lazy" src="images/zentropa-lucky-behind-the-scenes-kitchen.jpg" alt="Behind the scenes on the set of Lucky, kitchen scene" width="756" height="1400">
+              <img loading="lazy" src="images/zentropa-lucky-behind-the-scenes-monitor.jpg" alt="Crew checking the monitor on set of Lucky" width="1161" height="1400">
+            </div>
+          </article>
+
+          <article class="case" id="la-banchina" data-services="Social first · Photographer">
+            <div class="case-text">
+              <h3>La Banchina</h3>
+              <p class="role">Social first lifestyle</p>
+              <ul>
+                <li>SoMe narrative and content creation</li>
+                <li>All organic or UGC</li>
+              </ul>
+              <p class="result"><strong>7%</strong>organic follower growth in 6 low-season winter months.</p>
+              <ul class="tags"><li>Social first</li><li>Photographer</li></ul>
+            </div>
+            <div class="case-strip">
+              <img loading="lazy" src="images/la-banchina-chef-copenhagen.jpg" alt="Chef plating dishes in the kitchen at La Banchina, Copenhagen" width="922" height="1401">
+              <img loading="lazy" src="images/la-banchina-pasta-madfotograf-koebenhavn.jpg" alt="Fresh pasta being served at La Banchina, madfotograf København" width="934" height="1401">
+              <img loading="lazy" src="images/la-banchina-dessert-food-photography.jpg" alt="Dessert with sauce poured at La Banchina, food photography Copenhagen" width="934" height="1401">
+            </div>
+          </article>
+
+          <article class="case" id="frederiksborg" data-services="Event photography">
+            <div class="case-text">
+              <h3>Book launch at Frederiksborg Castle</h3>
+              <p class="role">Event photography</p>
+              <ul><li>A book launch with Copenhagen influencers in the castle halls</li></ul>
+              <ul class="tags"><li>Photographer</li></ul>
+            </div>
+            <div class="case-strip">
+              <img loading="lazy" src="images/frederiksborg-castle-book-launch-guest.jpg" alt="Guest by candlelight at a book launch, Frederiksborg Castle" width="934" height="1401">
+              <img loading="lazy" src="images/frederiksborg-castle-book-launch-cake.jpg" alt="Guest in purple with cake and cocktail at the Frederiksborg Castle book launch" width="934" height="1401">
+              <img loading="lazy" src="images/frederiksborg-castle-book-launch-dinner.jpg" alt="Long dinner table in the hall of Frederiksborg Castle" width="1401" height="934">
+            </div>
+          </article>
+
+          <article class="case" id="kopenhagen-fur" data-services="Brand activation · Branding">
+            <div class="case-text">
+              <h3>Kopenhagen Fur</h3>
+              <p class="role">Brand activation</p>
+              <ul>
+                <li>Branding projects for Danish fur in Asian fashion markets <span class="todo">CHECK ROLE</span></li>
+                <li>Campaigns, market research, workshops and social content</li>
+              </ul>
+              <ul class="tags"><li>Creative consultant</li></ul>
+            </div>
+            <div class="case-strip">
+              <img loading="lazy" src="images/kopenhagen-fur-little-mermaid-shoot.jpg" alt="Model in a fur coat by the Little Mermaid, Copenhagen harbour" width="934" height="1401">
+              <img loading="lazy" src="images/kopenhagen-fur-coat-harbour-copenhagen.jpg" alt="Fur coat seen from behind on the Copenhagen waterfront" width="938" height="1401">
+            </div>
+          </article>
+
+          <article class="case" id="coffee-festival" data-services="Event photography">
+            <div class="case-text">
+              <h3>Danish Coffee Festival</h3>
+              <p class="role">Event photography</p>
+              <ul><li>Baristas, tastings and the crowd, documented as it happened</li></ul>
+              <ul class="tags"><li>Photographer</li></ul>
+            </div>
+            <div class="case-strip">
+              <img loading="lazy" src="images/danish-coffee-festival-latte.jpg" alt="Latte on a marble table at the Danish Coffee Festival" width="933" height="1401">
+              <img loading="lazy" src="images/danish-coffee-festival-barista.jpg" alt="Barista pouring a tasting at the Danish Coffee Festival, Copenhagen" width="928" height="1401">
+            </div>
+          </article>
+
+          <article class="case" id="soepavilionen" data-services="Venue photography">
+            <div class="case-text">
+              <h3>Søpavilionen Chess Club</h3>
+              <p class="role">Venue and event photography</p>
+              <ul><li>The chess club on the terrace and the rooms inside the pavilion</li></ul>
+              <ul class="tags"><li>Photographer</li></ul>
+            </div>
+            <div class="case-strip">
+              <img loading="lazy" src="images/soepavilionen-chess-club-terrace.jpg" alt="Chess players on the terrace of Søpavilionen by the Copenhagen lakes" width="934" height="1401">
+              <img loading="lazy" src="images/soepavilionen-restaurant-interior.jpg" alt="Pink restaurant interior at Søpavilionen, Copenhagen" width="934" height="1401">
+            </div>
+          </article>
+
+          <article class="case" id="grandhood-palma" data-services="Behind the scenes photography">
+            <div class="case-text">
+              <h3>Grandhood and Palma</h3>
+              <p class="role">Behind the scenes</p>
+              <ul><li>Documenting the process and the people behind the shoot</li></ul>
+              <ul class="tags"><li>Photographer</li></ul>
+            </div>
+            <div class="case-strip">
+              <img loading="lazy" src="images/grandhood-palma-padel-behind-the-scenes.jpg" alt="Padel player seen through the court fence, behind the scenes for Grandhood" width="935" height="1401">
+              <img loading="lazy" src="images/grandhood-palma-interior-behind-the-scenes.jpg" alt="Warm arched interior in Palma, behind the scenes" width="935" height="1401">
+              <img loading="lazy" src="images/grandhood-palma-hotel-window.jpg" alt="Man by a hotel window, behind the scenes for Grandhood" width="1401" height="935">
+            </div>
+          </article>
+
+          <article class="case" id="pablo-jansana" data-services="Artist portraits">
+            <div class="case-text">
+              <h3>Painter Pablo Jansana</h3>
+              <p class="role">Artist portraits</p>
+              <ul><li>The painter at work and at rest in his studio</li></ul>
+              <ul class="tags"><li>Photographer</li></ul>
+            </div>
+            <div class="case-strip">
+              <img loading="lazy" src="images/pablo-jansana-painting-studio.jpg" alt="Painter Pablo Jansana working on a large canvas" width="934" height="1401">
+              <img loading="lazy" src="images/pablo-jansana-portrait-studio.jpg" alt="Portrait of painter Pablo Jansana in his sunlit studio" width="1401" height="1000">
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Results without photos -->
+    <section class="results" aria-labelledby="results-h">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="results-h">More results</h2>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong>500+</strong><b>Strangas Gyros</b><p>people in line for the Frederiksberg shop opening. Taglines, content strategy and 26% IG growth in a year.</p></div>
+          <div class="stat"><strong>70%</strong><b>Boulebar HQ</b><p>organic growth in 12 months, with SoMe strategy and content two days a week.</p></div>
+          <div class="stat"><strong>29%</strong><b>Enghave Kaffe</b><p>follower growth in four months, with organic photo and video.</p></div>
+          <div class="stat"><strong>2</strong><b>Branded podcasts via Filt</b><p>annual contracts signed in 8 months, for Mensch and SOS Børnebyerne.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Services -->
     <section id="services">
       <div class="wrap">
         <div class="section-head">
-          <h2>What you can book</h2>
-          <p class="label">From-prices · excl. moms</p>
-        </div>
-        <ul class="menu">
-          <li>
-            <h3>Culture workshop</h3>
-            <p>A focused session with your team to find the idea worth building around, and a plan you can act on.</p>
-            <dl class="prices">
-              <div><dt>Half day</dt><dd>6,500 kr</dd></div>
-              <div><dt>Day</dt><dd>10,000 kr</dd></div>
-            </dl>
-          </li>
-          <li>
-            <h3>Photo and video</h3>
-            <p>Food, venue and event content, shot to be used. You get edited images ready for web and social.</p>
-            <dl class="prices">
-              <div><dt>Half day</dt><dd>5,000 kr</dd></div>
-              <div><dt>Day</dt><dd>8,000 kr</dd></div>
-            </dl>
-          </li>
-          <li>
-            <h3>Activation or retainer</h3>
-            <p>Concept, partner match, run-of-show and content on the day. Or a monthly retainer if you want me on call.</p>
-            <dl class="prices">
-              <div><dt>Activation</dt><dd>25,000 kr</dd></div>
-              <div><dt>Retainer</dt><dd>10,000 kr/month</dd></div>
-            </dl>
-          </li>
-        </ul>
-        <p class="note">Prices are a starting point, adjusted to the scope and purpose of the job. Not sure yet? Start small with a half-day workshop or shoot.</p>
-      </div>
-    </section>
-
-    <!-- 3. Cases (facts to be confirmed by Steph) -->
-    <section id="cases">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Selected work</h2>
+          <h2>Services</h2>
+          <p class="lede">From ideas to cultural resonance, for food, hospitality, health and lifestyle brands.</p>
         </div>
         <div class="grid-3">
-          <article class="case">
-            <div class="frame" role="img" aria-label="1664 Blanc x Boulebar image placeholder"><span>Case image · 4:5</span></div>
-            <h3>1664 Blanc x Boulebar</h3>
-            <dl>
-              <div><dt>Challenge</dt><dd><span class="todo">TODO</span></dd></div>
-              <div><dt>Idea</dt><dd><span class="todo">TODO</span></dd></div>
-              <div><dt>What I did</dt><dd><ul><li><span class="todo">TODO</span></li></ul></dd></div>
-            </dl>
-            <p class="result"><strong>257%</strong> growth in event attendance.</p>
-          </article>
-          <article class="case">
-            <div class="frame" role="img" aria-label="Oatly image placeholder"><span>Case image · 4:5</span></div>
-            <h3>Oatly</h3>
-            <dl>
-              <div><dt>Challenge</dt><dd><span class="todo">TODO</span></dd></div>
-              <div><dt>Idea</dt><dd><span class="todo">TODO</span></dd></div>
-              <div><dt>What I did</dt><dd><ul><li>Local activation content</li><li>Visual materials</li></ul></dd></div>
-            </dl>
-          </article>
-          <article class="case">
-            <div class="frame" role="img" aria-label="Strangas Gyros image placeholder"><span>Case image · 4:5</span></div>
-            <h3>Strangas Gyros</h3>
-            <dl>
-              <div><dt>Challenge</dt><dd><span class="todo">TODO</span></dd></div>
-              <div><dt>Idea</dt><dd><span class="todo">TODO</span></dd></div>
-              <div><dt>What I did</dt><dd><ul><li><span class="todo">TODO</span></li></ul></dd></div>
-            </dl>
-          </article>
+          <div class="service">
+            <h3>Creative consultant</h3>
+            <p>Collaborations, pop-ups, brand partnerships and community building. From the first idea to the day itself.</p>
+          </div>
+          <div class="service">
+            <h3>Social first</h3>
+            <p>Strategy, concept and content, made for the platform it lives on.</p>
+          </div>
+          <div class="service">
+            <h3>Photographer</h3>
+            <p>Food, venues, events and behind the scenes. Documenting the process and what's real.</p>
+          </div>
+        </div>
+        <div class="process">
+          <p class="kicker">How a project runs</p>
+          <ol>
+            <li><b>Define the goal</b><span>Research, data, human insight and talking to your people.</span></li>
+            <li><b>Find the hook</b><span>Benchmarking and ideas. Why, how, who and what for.</span></li>
+            <li><b>Make it physical</b><span>An experience or community that plugs into what people talk about. A deck with the roll-out plan.</span></li>
+            <li><b>Execute and produce</b><span>Partners, run-of-show and content on the day.</span></li>
+            <li><b>Launch and learn</b><span>We look at the data together.</span></li>
+          </ol>
         </div>
       </div>
     </section>
 
-    <!-- 4. About -->
+    <!-- 7. Pricing -->
+    <section id="pricing">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Packages</h2>
+          <p class="lede">Start small with a day, or keep me on call.</p>
+        </div>
+        <div class="plans">
+          <div class="plan">
+            <h3>Day booking</h3>
+            <p class="price"><small>From</small>10,000 kr<span style="font-size:.5em;font-weight:600"> / day</span></p>
+            <p>A workshop, a shoot or a day on your activation. The easy first step.</p>
+          </div>
+          <div class="plan">
+            <h3>Project</h3>
+            <p class="price"><small>Fixed price</small>After a call</p>
+            <p>An activation, partnership or campaign from concept to content, priced on scope.</p>
+          </div>
+          <div class="plan feature">
+            <h3>Retainer</h3>
+            <p class="price"><small>From</small>50,000 kr<span style="font-size:.5em;font-weight:600"> / month</span></p>
+            <p>Ongoing strategy, content and activations, with me on call.</p>
+          </div>
+        </div>
+        <p class="note">All prices excl. moms. Prices are a starting point, adjusted to the scope and purpose of the job.</p>
+      </div>
+    </section>
+
+    <!-- 8. About -->
     <section id="about">
       <div class="wrap about-grid">
-        <div class="frame" role="img" aria-label="Portrait placeholder"><span>Portrait · 1:1</span></div>
+        <img loading="lazy" src="images/portrait-stephanie-pabotoy-copenhagen.jpg" alt="Stephanie Pabotoy, creative consultant and photographer, on a Copenhagen street" width="960" height="1201">
         <div class="about-copy">
           <h2>Hi, I'm Steph</h2>
-          <p class="lead">Most brands hire a strategist and a photographer separately. I do the thinking and the making, and I bring the right people into the room.</p>
-          <p>I'm a creative consultant and photographer based in Copenhagen, working with food, hospitality and culture brands. <span class="todo">TODO</span> one or two more sentences in your own words.</p>
+          <p>Over the last 10 years I've done the ABC of branding on both the client and agency side. That gives me a 360-degree view of how a concept needs to be executed to actually work for a brand.</p>
+          <p>I've conceptualised, collaborated and produced across hospitality, lifestyle and cultural institutions. I have a popcorn brain that lights up when I get to merge brand stories into high-quality visuals, cultural activations and production flows.</p>
+          <blockquote>I want your brand to be part of the culture.</blockquote>
         </div>
       </div>
     </section>
 
-    <!-- 5. Contact -->
+    <!-- 9. Contact -->
     <section id="contact">
       <div class="wrap contact-grid">
         <div class="contact-copy">
-          <h2>Get in touch</h2>
+          <h2>Catch me here or there</h2>
           <p>Tell me a bit about what you're planning. I'll reply within two working days.</p>
-          <a class="email" href="mailto:stephanie@paboto.com">stephanie@paboto.com</a>
-          <!-- TODO: confirm Instagram handle -->
-          <a class="label" href="https://instagram.com/paboto" rel="noopener">Instagram</a>
+          <div class="contact-links">
+            <a href="mailto:stephanie@paboto.com">stephanie@paboto.com</a>
+            <!-- TODO: confirm Instagram handle and LinkedIn URL -->
+            <a href="https://instagram.com/paboto" rel="noopener">Instagram</a>
+            <a href="https://www.linkedin.com/in/stephaniepabotoy" rel="noopener">LinkedIn</a>
+          </div>
         </div>
-        <!-- Opens the visitor's email app. Swap for a form service (e.g. Formspree) later if wanted. -->
-        <form action="mailto:stephanie@paboto.com" method="post" enctype="text/plain">
-          <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required></div>
-          <div class="field"><label for="f-email">Your email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+        <!-- Opens the visitor's email app. Swap action for a form service (e.g. Formspree) to receive it directly. -->
+        <form id="contact-form" action="mailto:stephanie@paboto.com" method="post" enctype="text/plain">
+          <div class="row-2">
+            <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+          </div>
+          <div class="row-2">
+            <div class="field"><label for="f-company">Company</label><input id="f-company" name="company" autocomplete="organization"></div>
+            <div class="field"><label for="f-type">Interested in</label>
+              <select id="f-type" name="interested_in">
+                <option>Day booking</option>
+                <option>Project</option>
+                <option>Retainer</option>
+                <option selected>Not sure yet</option>
+              </select>
+            </div>
+          </div>
           <div class="field"><label for="f-message">What are you planning?</label><textarea id="f-message" name="message" rows="5" required></textarea></div>
           <button class="btn" type="submit">Send</button>
+          <p class="form-status" id="form-status" role="status"></p>
         </form>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="wrap"><span>PABOTO · Copenhagen</span><a href="mailto:stephanie@paboto.com">stephanie@paboto.com</a></div>
+    <div class="wrap">
+      <img src="images/logo-coral.png" alt="PABOTO" width="311" height="56">
+      <span>Copenhagen · <a href="mailto:stephanie@paboto.com">stephanie@paboto.com</a></span>
+    </div>
   </footer>
+
+  <script>
+  (function () {
+    var reel = document.getElementById('reel');
+    if (!reel) return;
+    var caption = document.getElementById('reel-caption');
+    var count = document.getElementById('reel-count');
+    var bar = document.getElementById('reel-progress');
+    var toggle = document.getElementById('reel-toggle');
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var STEP = 1500;
+
+    // Collect every case photo, in page order, with the case it belongs to.
+    var photos = [];
+    document.querySelectorAll('.case').forEach(function (c) {
+      c.querySelectorAll('.case-strip img').forEach(function (img) {
+        photos.push({
+          src: img.getAttribute('src'), alt: img.alt,
+          land: +img.getAttribute('width') > +img.getAttribute('height'),
+          id: c.id, name: c.querySelector('h3').textContent, services: c.dataset.services
+        });
+      });
+    });
+    if (!photos.length) return;
+
+    // Build frames: landscape shots go full or wide, portraits rotate through sizes,
+    // and two portraits from the same case sometimes sit side by side.
+    var frames = [], portraitLayouts = ['mid', 'pair', 'small left', 'tall', 'small right', 'pair'], p = 0, l = 0;
+    for (var i = 0; i < photos.length; i++) {
+      var ph = photos[i];
+      if (ph.land) { frames.push({ layout: (l++ % 2 ? 'wide' : 'full'), items: [ph] }); continue; }
+      var lay = portraitLayouts[p++ % portraitLayouts.length];
+      var next = photos[i + 1];
+      if (lay === 'pair') {
+        if (next && !next.land && next.id === ph.id) { frames.push({ layout: 'pair', items: [ph, next] }); i++; continue; }
+        lay = 'mid';
+      }
+      frames.push({ layout: lay, items: [ph] });
+    }
+
+    var idx = 0, timer = null, playing = !reduce, visible = true, started = 0, raf = null;
+
+    function show(n) {
+      idx = (n + frames.length) % frames.length;
+      var f = frames[idx];
+      var el = document.createElement('div');
+      el.className = 'frame enter ' + f.layout;
+      f.items.forEach(function (ph) {
+        var img = new Image(); img.src = ph.src; img.alt = ph.alt; el.appendChild(img);
+      });
+      reel.appendChild(el);
+      while (reel.children.length > 3) reel.removeChild(reel.firstElementChild);
+      var c = f.items[0];
+      caption.href = '#' + c.id;
+      caption.innerHTML = '<strong></strong><span></span>';
+      caption.firstChild.textContent = c.name;
+      caption.lastChild.textContent = c.services;
+      count.textContent = String(idx + 1).padStart(2, '0') + ' / ' + String(frames.length).padStart(2, '0');
+      var nf = frames[(idx + 1) % frames.length];
+      nf.items.forEach(function (ph) { var pre = new Image(); pre.src = ph.src; });
+      started = performance.now();
+    }
+
+    function tick(now) {
+      if (playing && visible) {
+        var t = (now - started) / STEP;
+        bar.style.width = Math.min(t, 1) * 100 + '%';
+        if (t >= 1) show(idx + 1);
+      } else { started = now - (parseFloat(bar.style.width) || 0) / 100 * STEP; }
+      raf = requestAnimationFrame(tick);
+    }
+
+    function setPlaying(v) {
+      playing = v;
+      toggle.textContent = v ? 'Pause' : 'Play';
+      toggle.setAttribute('aria-label', v ? 'Pause the reel' : 'Play the reel');
+    }
+
+    document.getElementById('reel-next').addEventListener('click', function () { setPlaying(false); show(idx + 1); bar.style.width = '0'; });
+    document.getElementById('reel-prev').addEventListener('click', function () { setPlaying(false); show(idx - 1); bar.style.width = '0'; });
+    toggle.addEventListener('click', function () { setPlaying(!playing); });
+    reel.addEventListener('mouseenter', function () { reel.dataset.hover = playing ? '1' : ''; if (playing) setPlaying(false); });
+    reel.addEventListener('mouseleave', function () { if (reel.dataset.hover) setPlaying(true); reel.dataset.hover = ''; });
+    reel.addEventListener('click', function () { location.hash = caption.getAttribute('href'); });
+
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (e) { visible = e[0].isIntersecting; }).observe(reel);
+    }
+
+    // Replace the static first frame with the built sequence.
+    reel.innerHTML = '';
+    show(0);
+    setPlaying(playing);
+    raf = requestAnimationFrame(tick);
+  })();
+  </script>
 </body>
 </html>
