@@ -325,7 +325,7 @@ h2 {
 }
 .retainer h3 { font-family: var(--serif); font-size: clamp(26px, 2.4vw, 34px); margin-bottom: 6px; }
 .retainer p { color: rgba(244, 239, 231, .7); }
-.retainer dl { display: flex; gap: clamp(24px, 4vw, 64px); margin: 0; }
+.retainer dl { display: flex; flex-wrap: wrap; gap: 20px clamp(24px, 4vw, 64px); margin: 0; }
 .retainer dt { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: rgba(244, 239, 231, .55); }
 .retainer dd { margin: 4px 0 0; font-family: var(--serif); font-size: 28px; }
 
