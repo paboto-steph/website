@@ -307,3 +307,18 @@ dialog.sheet::backdrop { background: rgba(20,19,19,.55); }
 .also li { display: grid; grid-template-columns: minmax(160px, 1fr) minmax(0, 2fr); gap: 4px 24px; padding: 14px 0; border-bottom: 1px solid var(--line); color: var(--grey); }
 .also b { font-family: var(--display); font-weight: 700; font-size: clamp(18px, 1.6vw, 22px); color: var(--ink); }
 @media (max-width: 520px) { .also li { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Second door on the home page: corporate work ---------- */
+.second-door { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: clamp(24px, 4vw, 64px); align-items: center; padding-block: clamp(48px, 7vw, 100px) 0; }
+.sd-text { display: grid; gap: 14px; justify-items: start; max-width: 44ch; }
+.sd-text h2 { font-family: var(--display); font-weight: 700; font-size: clamp(26px, 2.8vw, 42px); line-height: 1.05; letter-spacing: -.02em; color: var(--coral-head); }
+.sd-imgs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+.sd-imgs img { width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; transition: transform 1.2s var(--ease); }
+.sd-imgs:hover img { transform: scale(1.02); }
+.text-link { color: var(--ink); border-bottom: 1px solid var(--coral); font-weight: 500; }
+.text-link::after { content: " ⟶"; }
+.text-link:hover { color: var(--coral-ink); }
+@media (max-width: 900px) {
+  .second-door { grid-template-columns: minmax(0, 1fr); }
+  .sd-imgs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
