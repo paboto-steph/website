@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Page not found | PABOTO</title>
   <meta name="description" content="This page does not exist. See the work by Stephanie Pabotoy instead.">
@@ -14,24 +13,21 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://paboto.com/images/og-paboto.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
   <meta name="robots" content="noindex">
-  <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body data-page="lost">
 <a class="skip" href="#main">Skip to content</a>
 
-<!-- MENU: the same on every page. If you rename or add a page, change it on all pages. -->
+<!-- MENU: the same on every page. If you change it, change it on all pages. -->
 <header class="hdr">
-  <nav class="nav-left" aria-label="Work">
-    <a href="work.html" data-page="work">Work</a>
-    <a href="photography.html" data-page="photography">Photography</a>
-  </nav>
-  <a class="brand" href="work.html"><img src="images/logo.svg" alt="PABOTO" width="118" height="19"></a>
-  <nav class="nav-right" aria-label="Main">
-    <a href="about.html" data-page="about">About</a>
-    <a href="prices.html" data-page="prices">Prices</a>
-    <a href="contact.html" data-page="contact">Contact</a>
+  <a class="brand" href="/work"><img src="/images/logo.svg" alt="PABOTO" width="118" height="19"></a>
+  <nav aria-label="Main">
+    <a href="/work" data-page="work">Work</a>
+    <a href="/photography" data-page="photography">Photography</a>
+    <a href="/about" data-page="about">About</a>
+    <a href="/contact" data-page="contact">Contact</a>
   </nav>
   <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false">Menu</button>
 </header>
@@ -40,7 +36,7 @@
   <section class="wrap lost">
     <h1 class="sr">Page not found</h1>
     <p>This page doesn't exist, or it has moved.</p>
-    <a class="pill solid" href="work.html">See the work</a>
+    <a class="pill solid" href="/work">See the work</a>
   </section>
 </main>
 
@@ -53,6 +49,6 @@
   </nav>
 </footer>
 
-<script src="assets/site.js"></script>
+<script src="/assets/site.js"></script>
 </body>
 </html>

@@ -13,35 +13,33 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://paboto.com/images/og-paboto.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/site.css">
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body data-page="prices">
 <a class="skip" href="#main">Skip to content</a>
 
-<!-- MENU: the same on every page. If you rename or add a page, change it on all pages. -->
+<!-- MENU: the same on every page. If you change it, change it on all pages. -->
 <header class="hdr">
-  <nav class="nav-left" aria-label="Work">
-    <a href="work.html" data-page="work">Work</a>
-    <a href="photography.html" data-page="photography">Photography</a>
-  </nav>
-  <a class="brand" href="work.html"><img src="images/logo.svg" alt="PABOTO" width="118" height="19"></a>
-  <nav class="nav-right" aria-label="Main">
-    <a href="about.html" data-page="about">About</a>
-    <a href="prices.html" data-page="prices">Prices</a>
-    <a href="contact.html" data-page="contact">Contact</a>
+  <a class="brand" href="/work"><img src="/images/logo.svg" alt="PABOTO" width="118" height="19"></a>
+  <nav aria-label="Main">
+    <a href="/work" data-page="work">Work</a>
+    <a href="/photography" data-page="photography">Photography</a>
+    <a href="/about" data-page="about">About</a>
+    <a href="/contact" data-page="contact">Contact</a>
   </nav>
   <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false">Menu</button>
 </header>
 
 <main id="main">
+  <!-- HIDDEN PAGE: prices.html is not shown on the site right now (see the README). -->
   <section class="wrap page-head">
     <h1>Prices</h1>
     <p>Two ways to book me, and one way to keep me. Prices are a starting point and are adjusted to the scope and purpose of the job.</p>
   </section>
 
   <section class="wrap">
-    <!-- ✏️ PRICES: one block per way of working. Change the numbers inside <b>...</b>. -->
     <div class="rates">
       <article class="rate">
         <div class="rate-name">
@@ -54,7 +52,7 @@
           <p><b>6.500 kr.</b> per half day</p>
           <p><b>1.500 kr.</b> per hour, minimum 3 hours</p>
         </div>
-        <a class="pill" href="contact.html#ideas">Book a call</a>
+        <a class="pill" href="/contact#ideas">Book a call</a>
       </article>
 
       <article class="rate">
@@ -68,7 +66,7 @@
           <p><b>5.000 kr.</b> per half day</p>
           <p><b>1.250 kr.</b> per hour, minimum 3 hours</p>
         </div>
-        <a class="pill" href="contact.html#photo">Book a call</a>
+        <a class="pill" href="/contact#photo">Book a call</a>
       </article>
 
       <article class="rate">
@@ -81,7 +79,7 @@
           <p><b>30.000 kr.</b> per month, 2 days a week</p>
           <p><b>43.000 kr.</b> per month, 3 days a week</p>
         </div>
-        <a class="pill solid" href="contact.html#retainer">Book a call</a>
+        <a class="pill solid" href="/contact#retainer">Book a call</a>
       </article>
     </div>
     <p class="price-note">All prices excl. moms. Not sure what you need? Start with a call, and we'll find the right size together.</p>
@@ -97,6 +95,6 @@
   </nav>
 </footer>
 
-<script src="assets/site.js"></script>
+<script src="/assets/site.js"></script>
 </body>
 </html>
