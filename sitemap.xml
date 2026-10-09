@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://paboto.com/</loc></url>
-  <url><loc>https://paboto.com/work</loc></url>
   <url><loc>https://paboto.com/work/boulebar</loc></url>
   <url><loc>https://paboto.com/work/casting</loc></url>
   <url><loc>https://paboto.com/work/jarritos</loc></url>
-  <url><loc>https://paboto.com/work/podcasts</loc></url>
   <url><loc>https://paboto.com/work/la-banchina</loc></url>
-  <url><loc>https://paboto.com/work/kopenhagen-fur</loc></url>
+  <url><loc>https://paboto.com/work/podcasts</loc></url>
   <url><loc>https://paboto.com/work/frederiksborg</loc></url>
+  <url><loc>https://paboto.com/work/kopenhagen-fur</loc></url>
+  <url><loc>https://paboto.com/work/sos</loc></url>
+  <url><loc>https://paboto.com/work/coffee-festival</loc></url>
   <url><loc>https://paboto.com/work/grandhood-palma</loc></url>
-  <url><loc>https://paboto.com/photography</loc></url>
-  <url><loc>https://paboto.com/about</loc></url>
-  <url><loc>https://paboto.com/contact</loc></url>
+  <url><loc>https://paboto.com/work/dmt</loc></url>
+  <url><loc>https://paboto.com/work/pablo-jansana</loc></url>
+  <url><loc>https://paboto.com/work/adtraction</loc></url>
+  <url><loc>https://paboto.com/work/soepavilionen</loc></url>
+  <url><loc>https://paboto.com/work/one-thirty-lab</loc></url>
+  <url><loc>https://paboto.com/work/personal</loc></url>
+  <url><loc>https://paboto.com/info</loc></url>
 </urlset>

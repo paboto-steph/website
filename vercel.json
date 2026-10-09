@@ -2,7 +2,11 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/prices", "destination": "/contact" },
-    { "source": "/projects", "destination": "/work" }
+    { "source": "/prices", "destination": "/info" },
+    { "source": "/work", "destination": "/" },
+    { "source": "/projects", "destination": "/" },
+    { "source": "/photography", "destination": "/" },
+    { "source": "/about", "destination": "/info" },
+    { "source": "/contact", "destination": "/info" }
   ]
 }
