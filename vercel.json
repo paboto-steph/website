@@ -3,9 +3,8 @@
   "trailingSlash": false,
   "redirects": [
     { "source": "/prices", "destination": "/info" },
-    { "source": "/work", "destination": "/" },
-    { "source": "/projects", "destination": "/" },
-    { "source": "/photography", "destination": "/" },
+    { "source": "/projects", "destination": "/work" },
+    { "source": "/photography", "destination": "/work" },
     { "source": "/about", "destination": "/info" },
     { "source": "/contact", "destination": "/info" }
   ]

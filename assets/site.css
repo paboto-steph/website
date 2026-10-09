@@ -1,5 +1,5 @@
 /* PABOTO · one stylesheet for every page.
-   Clean and simple, in the spirit of hyldstudio.com: the film and the work on a pale page,
+   Clean and simple, in the spirit of hyldstudio.com: the film first, then the work on a pale page,
    small captions, Helvetica, coral only for the logo and the project titles.
    You rarely need to change anything here. */
 
@@ -73,15 +73,20 @@ h1, h2, h3, p, figure { margin: 0; }
 .foot { margin-top: clamp(80px, 10vw, 140px); padding: 18px var(--g) calc(20px + env(safe-area-inset-bottom, 0px)); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 20px; font-size: 13px; color: var(--grey); }
 .foot a:hover { color: var(--ink); }
 
-/* ---------- Front page: the film and the work ---------- */
-.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(36px, 4.4vw, 64px) clamp(14px, 2vw, 30px); align-items: start; padding-top: clamp(12px, 2vw, 28px); }
+/* ---------- Front door: the film and nothing else ---------- */
+.landing { margin: 0; height: 100svh; overflow: hidden; background: var(--paper); }
+.film-door { position: fixed; inset: 0; display: block; cursor: pointer; background: var(--paper); }
+.film-door video { width: 100%; height: 100%; object-fit: contain; }
+
+/* ---------- Work: every project as one photo with a small caption ---------- */
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-flow: row dense; gap: clamp(36px, 4.4vw, 64px) clamp(14px, 2vw, 30px); align-items: start; padding-top: clamp(12px, 2vw, 28px); }
 .item { display: grid; gap: 9px; min-width: 0; }
 .item img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; background: var(--tile); transition: opacity .25s; }
 a.item:hover img { opacity: .86; }
 .item > span, .item figcaption { font-size: 11px; line-height: 1.35; text-transform: uppercase; letter-spacing: .06em; }
 a.item:hover > span { color: var(--coral-head); }
-.feature { grid-column: span 2; }
-.feature video { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; background: var(--paper); }
+.item.wide { grid-column: span 2; }
+.item.wide img { aspect-ratio: 16 / 9; }
 
 /* ---------- A project page ---------- */
 .project { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.3fr); gap: 24px clamp(28px, 4vw, 64px); padding-top: clamp(20px, 3vw, 44px); }
@@ -168,7 +173,7 @@ dialog.lightbox::backdrop { background: transparent; }
   :root { --hh: 54px; }
   .brand img { width: 96px; }
   .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 12px; }
-  .feature { grid-column: 1 / -1; }
+  .item.wide { grid-column: 1 / -1; }
   .media { column-gap: 8px; }
   .media > * { margin-bottom: 8px; }
   .foot { flex-direction: column; }

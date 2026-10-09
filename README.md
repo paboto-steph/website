@@ -8,7 +8,8 @@ Easiest of all: tell Claude what you want changed, and it's done for you.
 
 | On the site | File |
 |---|---|
-| Front page: the film and all the work | `index.html` |
+| The film you land on | `index.html` |
+| Work: all the projects | `work.html` |
 | One page per project | the `work` folder, e.g. `work/boulebar.html` |
 | Info: about you and contact | `info.html` |
 | All photos | the `images` folder |
@@ -33,15 +34,15 @@ The lines that start with `<!-- ✏️` explain each part in plain words.
 3. Open the `images` folder, click **Add file → Upload files**, drag the photo in, then **Commit changes**.
 4. In the page file, change the old file name after `/images/` to the new one, and update `alt="…"`: a short description of the photo, good for Google.
 
-## Move a project on the front page
+## Move a project on the Work page
 
-In `index.html`, each project is one line starting with `<a class="item"`. Cut a whole line and paste it higher or lower. The order of the lines is the order on the page.
+In `work.html`, each project is one line starting with `<a class="item"`. Cut a whole line and paste it higher or lower. The order of the lines is the order on the page. A line with `class="item wide"` shows double width.
 
 ## Add a new project
 
 1. Open the `work` folder, open a project (e.g. `boulebar.html`) and copy everything in it.
 2. In the `work` folder, click **Add file → Create new file**, name it e.g. `strangas.html`, paste, and change the words and photos.
-3. In `index.html`, copy a project line, paste it, and change the link to `/work/strangas`, the photo and the caption.
+3. In `work.html`, copy a project line, paste it, and change the link to `/work/strangas`, the photo and the caption.
 
 ## The hidden prices page
 
