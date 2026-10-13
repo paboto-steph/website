@@ -4,7 +4,11 @@ Everything on paboto.com lives here. When you save (commit) a change, the site u
 
 Easiest of all: tell Claude what you want changed, and it's done for you.
 
-## Which file is which page
+## October 2026: the site is now one page
+
+Everything lives in `index.html`: the film, your story on the La Banchina photo, services, clients, Before PABOTO, the work tiles and contact. Its photos and film are in `assets`. The old pages (work, about, photography, contact, prices) are still in the repo but send visitors to the front page, see `vercel.json`. Delete those lines there to bring a page back.
+
+## Which file is which page (old multi-page version)
 
 | On the site | File |
 |---|---|
