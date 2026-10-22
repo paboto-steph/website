@@ -77,6 +77,23 @@ p,h1,h2,ul{margin:0}
 
 /* Project pages */
 
+/* About view */
+.about-view{padding:clamp(24px,5vw,72px) 0 clamp(72px,10vw,120px)}
+.about-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(36px,6vw,96px);align-items:start}
+.about-grid .text p+p{margin-top:1.2em}
+.about-grid .photo{width:100%;max-width:380px;aspect-ratio:4/5;object-fit:cover;justify-self:end}
+.about-reach{margin-top:2.4em}
+.about-reach .label+a{margin-top:.6em}
+.about-reach a{display:block}
+body.js .about-view{display:none}
+body.js.v-about .about-view{display:block}
+body.js.v-about #main{display:none}
+body.js.v-about .page>.bar{position:relative;padding-left:0;padding-right:0}
+body.js.v-about .page>.bar nav a{color:var(--coral)}
+body.js.v-about .page>.bar .home img{filter:none}
+body.js.v-about .page>.bar nav a.to-about{color:var(--ink)}
+@media (max-width:760px){.about-grid{grid-template-columns:1fr}.about-grid .photo{justify-self:start;max-width:320px;order:-1}}
+
 /* screens */
 body.js .page{display:none}
 body.js.entered .page{display:block;animation:fadein .5s ease}
@@ -107,6 +124,7 @@ body.entered .page>.bar .home img{filter:brightness(0) invert(1)}
     <a href="#" class="home" aria-label="Back to the intro video"><img src="assets/paboto-logo.png" alt="PABOTO"></a>
     <nav aria-label="Main">
       <a href="#work-list" class="jump">Work</a>
+      <a href="#about" class="to-about">About</a>
       <a href="mailto:stephanie@paboto.com">Email</a>
     </nav>
   </header>
@@ -149,6 +167,22 @@ body.entered .page>.bar .home img{filter:brightness(0) invert(1)}
     </section>
   </main>
 
+  <main id="about" class="about-view" aria-label="About">
+    <div class="about-grid">
+      <div class="text">
+        <p>I'm Stephanie, founder of PABOTO. I'm a global creative strategic hybrid based in Copenhagen, and I've done the ABC of branding on both the client and the agency side.</p>
+        <p>Ten years and counting, I've created, conceptualised, collaborated, consulted, activated and produced across hospitality, lifestyle and cultural institutions. PABOTO is my creative practice for brand storytelling through visuals, production, activations and strategy, made for commercial, cultural and artistic platforms.</p>
+        <p>I have a popcorn brain. It's at its best at the start of something new, when there are people to bring together.</p>
+        <div class="about-reach">
+          <h2 class="label">Let's bring some good people together.</h2>
+          <a href="mailto:stephanie@paboto.com">stephanie@paboto.com</a>
+          <a href="tel:+4525112261">+45 25 11 22 61</a>
+        </div>
+      </div>
+      <img class="photo" src="assets/stephanie-pabotoy-portraet-koebenhavn.jpg" alt="Stephanie Pabotoy, founder of PABOTO, on a Copenhagen street">
+    </div>
+  </main>
+
 </div>
 
 <script>
@@ -157,9 +191,10 @@ body.entered .page>.bar .home img{filter:brightness(0) invert(1)}
   var v=document.querySelector('.intro video');
   function route(){
     var h=location.hash.replace('#','');
-    b.classList.remove('entered');
+    b.classList.remove('entered','v-about');
     if(!h){try{v.play()}catch(e){};window.scrollTo(0,0);return;}
     b.classList.add('entered');try{v.pause()}catch(e){}
+    if(h==='about'){b.classList.add('v-about');window.scrollTo(0,0);return;}
     if(h==='work-list'||h==='contact'){
       var el=document.getElementById(h);if(el)el.scrollIntoView();
     }else{window.scrollTo(0,0);}
@@ -167,6 +202,7 @@ body.entered .page>.bar .home img{filter:brightness(0) invert(1)}
   function go(hash){history.pushState(null,'',hash||location.pathname);route();}
   document.querySelector('.intro').addEventListener('click',function(e){e.preventDefault();go('#work')});
   document.querySelector('.home').addEventListener('click',function(e){e.preventDefault();go('')});
+  document.querySelector('.to-about').addEventListener('click',function(e){e.preventDefault();go('#about')});
   document.querySelector('.jump').addEventListener('click',function(e){e.preventDefault();go('#work-list')});
   window.addEventListener('popstate',route);
   route();
