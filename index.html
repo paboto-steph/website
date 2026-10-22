@@ -77,6 +77,38 @@ p,h1,h2,ul{margin:0}
 
 /* Project pages */
 
+/* Case view */
+.cover.open{display:block}
+.cover .more{display:block;margin-top:.2em;color:var(--coral)}
+.cover.open:hover img{opacity:.9}
+.case-view{padding:clamp(16px,3vw,40px) 0 clamp(72px,10vw,120px)}
+.case-view .back{color:var(--coral);display:inline-block}
+.case-head{margin:clamp(28px,4vw,48px) 0 clamp(28px,4vw,40px)}
+.case-head h1{font-weight:700;font-size:clamp(1.6rem,3.2vw,2.6rem);line-height:1.05;letter-spacing:-0.025em}
+.case-head .what{color:var(--mute);margin-top:.3em}
+.case-text{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,56px);padding-bottom:clamp(40px,6vw,72px)}
+.case-text .label+p{margin-top:.6em}
+.case-media{display:flex;flex-direction:column;gap:clamp(10px,1.4vw,18px);margin-bottom:clamp(40px,6vw,72px)}
+.reels{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(10px,1.4vw,18px)}
+.reels video{width:100%;aspect-ratio:9/16;object-fit:cover;background:#E9E4E2}
+.row{display:grid;gap:clamp(10px,1.4vw,18px)}
+.row.two{grid-template-columns:1fr 1fr}.row.three{grid-template-columns:repeat(3,1fr)}.row.one{grid-template-columns:1fr}
+.row img{width:100%;aspect-ratio:2/3;object-fit:cover}
+.row.one img{aspect-ratio:3/2}
+body.js .case-view{display:none}
+body.js.v-case .case-view{display:block}
+body.js.v-case #main{display:none}
+body.js.v-case .page>.bar{position:relative;padding-left:0;padding-right:0}
+body.js.v-case .page>.bar nav a{color:var(--coral)}
+body.js.v-case .page>.bar .home img{filter:none}
+@media (max-width:760px){
+  .case-text{grid-template-columns:1fr;gap:24px}
+  .reels{display:flex;overflow-x:auto;scroll-snap-type:x mandatory}
+  .reels video{flex:0 0 62%;scroll-snap-align:start}
+  .row.three{grid-template-columns:1fr 1fr}
+  .row.three img:nth-child(3){grid-column:1/-1;aspect-ratio:4/5}
+}
+
 /* About view */
 .about-view{padding:clamp(24px,5vw,72px) 0 clamp(72px,10vw,120px)}
 .about-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(36px,6vw,96px);align-items:start}
@@ -150,7 +182,7 @@ body.entered .page>.bar .home img{filter:brightness(0) invert(1)}
     <section id="work-list" aria-label="Work">
       <h2 class="label work-label">Work</h2>
       <div class="covers">
-        <figure class="cover"><img src="assets/covers/boulebar.jpg" alt="1664 Blanc x Boulebar" loading="lazy"><span class="name">1664 Blanc x Boulebar</span><span class="what">Brand partnership, summer events and content</span></figure>
+        <a class="cover open" href="#boulebar"><img src="assets/covers/boulebar.jpg" alt="1664 Blanc x Boulebar" loading="lazy"><span class="name">1664 Blanc x Boulebar</span><span class="what">Brand partnership, summer events and content</span><span class="more">See the project</span></a>
         <figure class="cover"><img src="assets/covers/la-banchina.jpg" alt="La Banchina" loading="lazy"><span class="name">La Banchina</span><span class="what">Social media and content</span></figure>
         <figure class="cover"><img src="assets/covers/coffee-festival.jpg" alt="Danish Coffee Festival" loading="lazy"><span class="name">Danish Coffee Festival</span><span class="what">Event photography</span></figure>
         <figure class="cover"><img src="assets/covers/frederiksborg.jpg" alt="Book launch at Frederiksborg Castle, photographed by Stephanie Pabotoy" loading="lazy"><span class="name">Frederiksborg Castle</span><span class="what">Book launch photography and social content</span></figure>
@@ -165,6 +197,29 @@ body.entered .page>.bar .home img{filter:brightness(0) invert(1)}
       <a href="mailto:stephanie@paboto.com">stephanie@paboto.com</a>
       <a href="tel:+4525112261">+45 25 11 22 61</a>
     </section>
+  </main>
+
+  <main id="boulebar" class="case-view" aria-label="1664 Blanc x Boulebar">
+    <a class="back" href="#work-list">Back to work</a>
+    <header class="case-head">
+      <h1>1664 Blanc x Boulebar</h1>
+      <p class="what">Brand partnership, summer events and content</p>
+    </header>
+    <div class="case-text">
+      <div><h2 class="label">The idea</h2><p>A beer brand and a pétanque bar both wanted people to come back all summer. I pitched them a Sunday pétanque series with 1664 Blanc built into the day.</p></div>
+      <div><h2 class="label">What I did</h2><p>Developed and pitched the partnership, ran five Sunday events with a host, a DJ and prizes, and shot all the photo and video.</p></div>
+      <div><h2 class="label">The result</h2><p>Attendance grew 257% over the summer. Featured on The Jungle List, and the concept came back the following summer.</p></div>
+    </div>
+    <div class="case-media">
+      <div class="reels"><video muted loop playsinline preload="none" poster="assets/boulebar/boulebar-reel-story.jpg"><source src="assets/boulebar/boulebar-reel-story.mp4" type="video/mp4"></video><video muted loop playsinline preload="none" poster="assets/boulebar/boulebar-reel-game.jpg"><source src="assets/boulebar/boulebar-reel-game.mp4" type="video/mp4"></video><video muted loop playsinline preload="none" poster="assets/boulebar/boulebar-reel-vibe.jpg"><source src="assets/boulebar/boulebar-reel-vibe.mp4" type="video/mp4"></video></div>
+      <div class="row two"><img src="assets/boulebar/host-crowd.jpg" alt="Host warming up the crowd under the 1664 umbrellas" loading="lazy"><img src="assets/boulebar/throw.jpg" alt="A player celebrating a throw on the pétanque court" loading="lazy"></div>
+      <div class="row three"><img src="assets/boulebar/bottle.jpg" alt="A 1664 Blanc bottle in hand, shot with motion blur" loading="lazy"><img src="assets/boulebar/boules.jpg" alt="Hands holding two boules behind the back" loading="lazy"><img src="assets/boulebar/circle.jpg" alt="Feet in the throwing circle, seen from above" loading="lazy"></div>
+      <div class="row one"><img src="assets/boulebar/lineup.jpg" alt="Players lined up along the court at Boulebar" loading="lazy"></div>
+      <div class="row two"><img src="assets/boulebar/laughing.jpg" alt="The host walking the court while guests laugh" loading="lazy"><img src="assets/boulebar/winner.jpg" alt="The winner with his medal, cheered on by the host" loading="lazy"></div>
+      <div class="row three"><img src="assets/boulebar/table.jpg" alt="Guests at a table with 1664 Blanc and wine" loading="lazy"><img src="assets/boulebar/dj.jpg" alt="The DJ playing under the 1664 banner" loading="lazy"><img src="assets/boulebar/portrait.jpg" alt="An older guest smiling in the afternoon sun" loading="lazy"></div>
+      <div class="row two"><img src="assets/boulebar/hug.jpg" alt="Two friends hugging in front of the 1664 bar" loading="lazy"><img src="assets/boulebar/couple.jpg" alt="A couple laughing at a table with 1664 Blanc bottles" loading="lazy"></div>
+    </div>
+    <a class="back" href="#work-list">Back to work</a>
   </main>
 
   <main id="about" class="about-view" aria-label="About">
@@ -191,9 +246,12 @@ body.entered .page>.bar .home img{filter:brightness(0) invert(1)}
   var v=document.querySelector('.intro video');
   function route(){
     var h=location.hash.replace('#','');
-    b.classList.remove('entered','v-about');
+    b.classList.remove('entered','v-about','v-case');
+    var cv=document.querySelectorAll('.case-view video');
     if(!h){try{v.play()}catch(e){};window.scrollTo(0,0);return;}
     b.classList.add('entered');try{v.pause()}catch(e){}
+    cv.forEach(function(x){try{x.pause()}catch(e){}});
+    if(h==='boulebar'){b.classList.add('v-case');window.scrollTo(0,0);cv.forEach(function(x){x.play().catch(function(){})});return;}
     if(h==='about'){b.classList.add('v-about');window.scrollTo(0,0);return;}
     if(h==='work-list'||h==='contact'){
       var el=document.getElementById(h);if(el)el.scrollIntoView();
@@ -202,6 +260,8 @@ body.entered .page>.bar .home img{filter:brightness(0) invert(1)}
   function go(hash){history.pushState(null,'',hash||location.pathname);route();}
   document.querySelector('.intro').addEventListener('click',function(e){e.preventDefault();go('#work')});
   document.querySelector('.home').addEventListener('click',function(e){e.preventDefault();go('')});
+  document.querySelectorAll('a.cover.open').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();go(a.getAttribute('href'))})});
+  document.querySelectorAll('.case-view .back').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();go('#work-list')})});
   document.querySelector('.to-about').addEventListener('click',function(e){e.preventDefault();go('#about')});
   document.querySelector('.jump').addEventListener('click',function(e){e.preventDefault();go('#work-list')});
   window.addEventListener('popstate',route);
